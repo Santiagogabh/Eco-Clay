@@ -1,0 +1,58 @@
+{
+  "name": "Participation",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "ID del evento"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email del participante"
+    },
+    "joined_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha de inscripción"
+    },
+    "attendance_confirmed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Si confirmó asistencia"
+    },
+    "hours_contributed": {
+      "type": "number",
+      "description": "Horas contribuidas al evento"
+    }
+  },
+  "required": [
+    "event_id",
+    "user_email"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "write": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

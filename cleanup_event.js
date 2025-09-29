@@ -1,0 +1,90 @@
+{
+  "name": "CleanupEvent",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Nombre del evento de limpieza"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripción detallada del evento"
+    },
+    "address": {
+      "type": "string",
+      "description": "Dirección exacta del evento"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitud de la ubicación"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitud de la ubicación"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha del evento"
+    },
+    "time": {
+      "type": "string",
+      "description": "Hora del evento"
+    },
+    "materials_needed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Lista de materiales necesarios"
+    },
+    "organizer_photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs de fotos del organizador"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Lista de emails de participantes"
+    },
+    "donation_goal": {
+      "type": "number",
+      "description": "Meta de donaciones en euros"
+    },
+    "donations_received": {
+      "type": "number",
+      "default": 0,
+      "description": "Total de donaciones recibidas"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "upcoming",
+        "active",
+        "completed"
+      ],
+      "default": "upcoming",
+      "description": "Estado del evento"
+    },
+    "max_participants": {
+      "type": "number",
+      "description": "Número máximo de participantes"
+    }
+  },
+  "required": [
+    "title",
+    "address",
+    "date",
+    "time"
+  ],
+  "rls": {
+    "write": {
+      "created_by": "{{user.email}}"
+    }
+  }
+}
