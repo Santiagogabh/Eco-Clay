@@ -1,0 +1,60 @@
+{
+  "name": "Donation",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "ID del evento"
+    },
+    "donor_email": {
+      "type": "string",
+      "description": "Email del donante"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Cantidad donada en euros"
+    },
+    "donor_name": {
+      "type": "string",
+      "description": "Nombre del donante"
+    },
+    "message": {
+      "type": "string",
+      "description": "Mensaje opcional del donante"
+    }
+  },
+  "required": [
+    "event_id",
+    "donor_email",
+    "amount"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "donor_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "write": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}
