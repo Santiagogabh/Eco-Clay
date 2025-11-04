@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import '../index.css';
 
 // Pages
-import MapPage from '../Pages/maps.jsx';
+import MapPage from 'src/Pages/maps.jsx';
 import EventsPage from '../Pages/events.jsx';
 import DonationsPage from '../Pages/donations.jsx';
 import ProfilePage from '../Pages/profile.jsx';
