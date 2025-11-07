@@ -11,7 +11,7 @@ import ProfilePage from '@/Pages/profile.jsx';
 import CreateEventPage from '@/Pages/create_event.jsx';
 
 // Layout is at project root
-import Layout from '@/layout.jsx';
+import Layout from '@/Pages/layout.jsx';
 
 function App() {
   return (
