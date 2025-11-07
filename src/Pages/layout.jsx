@@ -116,7 +116,7 @@ export default function GreenPulseLayout() {
                   Mapa Limpio
                 </h1>
                 <p className="text-sm text-slate-600 font-medium">
-                  Juntos por un futuro verde 🌱
+                  
                 </p>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function GreenPulseLayout() {
               Zonas más contaminadas
             </h2>
             <p className="text-slate-600 text-lg">
-              Necesitan de tu colaboración en este momento
+              
             </p>
           </div>
           
