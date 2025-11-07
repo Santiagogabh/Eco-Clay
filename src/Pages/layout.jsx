@@ -1,33 +1,27 @@
 import React, { useState } from "react";
 import { MapPin, Calendar, User, Heart, Sparkles } from "lucide-react";
 
-const navigationItems = [
-  {
-    title: "Mapa",
-    icon: MapPin,
-    gradient: "from-emerald-400 to-teal-500",
-    shadowColor: "shadow-emerald-500/50"
-  },
-  {
-    title: "Eventos",
-    icon: Calendar,
-    gradient: "from-purple-400 to-pink-500",
-    shadowColor: "shadow-purple-500/50"
-  },
-  {
-    title: "Perfil",
-    icon: User,
-    gradient: "from-blue-400 to-cyan-500", 
-    shadowColor: "shadow-blue-500/50"
-  },
-  {
-    title: "Donaciones",
-    icon: Heart,
-    gradient: "from-rose-400 to-orange-500",
-    shadowColor: "shadow-rose-500/50"
-    <a href="donations.jsx"></a>
+// Importa tus páginas reales:
+import MapaPage from "../Pages/maps.jsx";
+import EventsPage from "../Pages/events.jsx";
+import ProfilePage from "../Pages/profile.jsx";
+import DonationsPage from "../Pages/donations.jsx";
+
+const renderContent = () => {
+  switch (activeTab) {
+    case 0:
+      return <MapaPage />;
+    case 1:
+      return <EventsPage />;
+    case 2:
+      return <ProfilePage />;
+    case 3:
+      return <DonationsPage />;
+    default:
+      return null;
   }
-];
+};
+
 
 export default function MapaLimpioLayout() {
   const [activeTab, setActiveTab] = useState(0);
