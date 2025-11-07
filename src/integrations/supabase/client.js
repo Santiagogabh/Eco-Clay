@@ -1,4 +1,7 @@
 // src/integrations/supabase/client.js
+console.log("IMPORTMETA env url:", import.meta.env.VITE_SUPABASE_URL);
+console.log("IMPORTMETA env anon:", import.meta.env.VITE_SUPABASE_ANON_KEY);
+
 import { createClient } from "@supabase/supabase-js";
 
 // Estas variables deben estar definidas en tu entorno (.env)
