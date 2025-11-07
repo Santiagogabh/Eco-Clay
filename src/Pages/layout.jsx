@@ -25,6 +25,7 @@ const navigationItems = [
     icon: Heart,
     gradient: "from-rose-400 to-orange-500",
     shadowColor: "shadow-rose-500/50"
+    <a href="donations.jsx"></a>
   }
 ];
 
