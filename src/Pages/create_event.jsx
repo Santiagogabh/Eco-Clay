@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { ArrowLeft, Upload, X, MapPin } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
+import { supabase } from "@/integrations/supabase/client"; // ✅ Importación añadida
 
 export default function CreateEventPage() {
   const navigate = useNavigate();
@@ -48,18 +49,31 @@ export default function CreateEventPage() {
     }));
   };
 
+  // ✅ Subida automática a Supabase Storage
   const handlePhotoUpload = async (files) => {
     setUploading(true);
     try {
       const uploadPromises = Array.from(files).map(async (file) => {
-        const result = await UploadFile({ file });
-        return result.file_url;
+        // Generar nombre único para cada imagen
+        const fileName = `${Date.now()}_${file.name}`;
+        const { data, error } = await supabase.storage
+          .from("event-photos") // nombre del bucket en Supabase
+          .upload(fileName, file);
+
+        if (error) throw error;
+
+        // Obtener URL pública
+        const { data: publicUrlData } = supabase.storage
+          .from("event-photos")
+          .getPublicUrl(fileName);
+
+        return publicUrlData.publicUrl;
       });
-      
+
       const uploadedUrls = await Promise.all(uploadPromises);
       setPhotos(prev => [...prev, ...uploadedUrls]);
     } catch (error) {
-      console.error("Error uploading photos:", error);
+      console.error("Error subiendo fotos a Supabase:", error);
     } finally {
       setUploading(false);
     }
@@ -75,8 +89,7 @@ export default function CreateEventPage() {
 
     try {
       const user = await User.me();
-      
-      // Geocoding simulation - in a real app you'd use a geocoding service
+
       const coordinates = {
         latitude: 40.4168 + (Math.random() - 0.5) * 0.1,
         longitude: -3.7038 + (Math.random() - 0.5) * 0.1
@@ -95,7 +108,7 @@ export default function CreateEventPage() {
 
       navigate(createPageUrl("Events"));
     } catch (error) {
-      console.error("Error creating event:", error);
+      console.error("Error creando el evento:", error);
     } finally {
       setCreating(false);
     }
@@ -103,7 +116,6 @@ export default function CreateEventPage() {
 
   return (
     <div className="p-6 space-y-6">
-      {/* Header */}
       <div className="flex items-center gap-4">
         <Link to={createPageUrl("Events")}>
           <Button variant="outline" size="icon" className="clay-button rounded-2xl">
@@ -116,12 +128,10 @@ export default function CreateEventPage() {
         </div>
       </div>
 
-      {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Basic Info */}
         <div className="clay-card p-6 space-y-4">
           <h3 className="text-lg font-semibold text-gray-800">Información Básica</h3>
-          
+
           <div className="space-y-2">
             <Label htmlFor="title">Título del Evento *</Label>
             <Input
@@ -186,10 +196,9 @@ export default function CreateEventPage() {
           </div>
         </div>
 
-        {/* Materials */}
         <div className="clay-card p-6 space-y-4">
           <h3 className="text-lg font-semibold text-gray-800">Materiales Necesarios</h3>
-          
+
           <div className="flex gap-2">
             <Input
               value={currentMaterial}
@@ -225,10 +234,9 @@ export default function CreateEventPage() {
           )}
         </div>
 
-        {/* Photos */}
         <div className="clay-card p-6 space-y-4">
           <h3 className="text-lg font-semibold text-gray-800">Fotos del Lugar</h3>
-          
+
           <div className="border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center">
             <input
               type="file"
@@ -267,10 +275,9 @@ export default function CreateEventPage() {
           )}
         </div>
 
-        {/* Additional Settings */}
         <div className="clay-card p-6 space-y-4">
           <h3 className="text-lg font-semibold text-gray-800">Configuración Adicional</h3>
-          
+
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="donation_goal">Meta de Donaciones (COP)</Label>
@@ -300,7 +307,6 @@ export default function CreateEventPage() {
           </div>
         </div>
 
-        {/* Submit Button */}
         <Button 
           type="submit" 
           disabled={creating || uploading}
