@@ -116,7 +116,7 @@ export default function GreenPulseLayout() {
                   Mapa Limpio
                 </h1>
                 <p className="text-sm text-slate-600 font-medium">
-                  
+                  Juntos por un futuro verde 🌱
                 </p>
               </div>
             </div>
@@ -154,99 +154,10 @@ export default function GreenPulseLayout() {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="pb-32 px-6 py-8">
-        <div className="max-w-6xl mx-auto">
-          {/* Contenido de ejemplo */}
-          <div className="glass-morphism rounded-3xl p-8 shadow-xl mb-6">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">
-              Zonas más contaminadas
-            </h2>
-            <p className="text-slate-600 text-lg">
-              
-            </p>
-          </div>
-          
-          {/* Tarjetas de ejemplo */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[1, 2, 3, 4].map((item) => (
-              <div 
-                key={item}
-                className="glass-morphism rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center shadow-lg">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-800">Zona {item}</h3>
-                    <p className="text-sm text-slate-500">Bogotá, Colombia</p>
-                  </div>
-                </div>
-                <div className="h-32 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Main Content - Aquí va tu mapa */}
+      <main className="h-[calc(100vh-80px)]">
+        {children}
       </main>
-
-      {/* Bottom Navigation mejorada */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50">
-        <div className="relative px-6 py-4">
-          {/* Fondo con efecto glass morphism */}
-          <div className="absolute inset-0 glass-morphism border-t-2 border-white/50"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent"></div>
-          
-          <div className="relative flex justify-around items-end">
-            {navigationItems.map((item, index) => {
-              const isActive = activeTab === index;
-              return (
-                <button
-                  key={item.title}
-                  onClick={() => setActiveTab(index)}
-                  className={`nav-item flex flex-col items-center gap-2 ${
-                    isActive ? 'nav-item-active' : ''
-                  }`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {/* Contenedor del icono con gradiente y sombra */}
-                  <div className={`relative ${isActive ? 'scale-110' : ''}`}>
-                    {isActive && (
-                      <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} rounded-2xl blur-xl ${item.shadowColor} opacity-60 pulse-glow`}></div>
-                    )}
-                    <div className={`relative p-3 rounded-2xl transition-all duration-300 ${
-                      isActive 
-                        ? `bg-gradient-to-br ${item.gradient} shadow-xl ${item.shadowColor}` 
-                        : 'bg-white/60 shadow-md hover:shadow-lg hover:bg-white/80'
-                    }`}>
-                      <item.icon 
-                        className={`w-6 h-6 transition-colors duration-300 ${
-                          isActive ? 'text-white' : 'text-slate-600'
-                        }`} 
-                        strokeWidth={2.5}
-                      />
-                    </div>
-                  </div>
-                  
-                  {/* Etiqueta del item */}
-                  <span className={`text-xs font-bold transition-all duration-300 ${
-                    isActive 
-                      ? 'text-emerald-700 scale-105' 
-                      : 'text-slate-500'
-                  }`}>
-                    {item.title}
-                  </span>
-                  
-                  {/* Indicador activo */}
-                  {isActive && (
-                    <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${item.gradient} pulse-glow shadow-lg ${item.shadowColor}`}></div>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </nav>
     </div>
   );
 }
