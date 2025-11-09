@@ -44,61 +44,60 @@ export default function EventsPage() {
   const loadData = async () => {
     setLoading(true);
     try {
-      let eventData = [];
-      let user = null;
+      // PRIORIDAD: Cargar eventos directamente desde Supabase
+      console.log("🔄 Cargando eventos desde Supabase...");
+      const { data: eventData, error: eventsError } = await supabase
+        .from("events")
+        .select("*")
+        .order("created_at", { ascending: false });
 
-      // Try to load events
-      try {
-        eventData = await CleanupEvent.list('-created_date');
-      } catch (err) {
-        console.warn("CleanupEvent.list failed, trying Supabase:", err);
-        const { data, error } = await supabase
-          .from("events")
-          .select("*")
-          .order("created_at", { ascending: false });
-        if (!error && data) eventData = data;
+      if (eventsError) {
+        console.error("❌ Error cargando eventos:", eventsError);
+      } else {
+        console.log("✅ Eventos cargados:", eventData?.length || 0);
+        setEvents(eventData || []);
       }
 
-      // Try to get current user
+      // Obtener usuario actual
+      let user = null;
       try {
-        user = await User.me();
-      } catch (e) {
-        console.warn("User.me() failed:", e);
-        // Try to get user from Supabase auth
         const { data: { user: authUser } } = await supabase.auth.getUser();
         if (authUser) {
           user = { email: authUser.email, id: authUser.id };
+          console.log("✅ Usuario actual:", user.email);
+        } else {
+          console.log("⚠️ No hay usuario autenticado");
         }
+      } catch (e) {
+        console.warn("⚠️ Error obteniendo usuario:", e);
       }
 
-      setEvents(eventData || []);
       setCurrentUser(user);
 
-      // Load participations if user exists
+      // Cargar participaciones del usuario
       if (user && user.email) {
         try {
-          const participations = await Participation.filter(
-            { user_email: user.email },
-            '-created_date'
-          );
-          setMyParticipations(participations || []);
-        } catch (err) {
-          console.warn("Participation.filter failed, trying Supabase:", err);
-          try {
-            const { data } = await supabase
-              .from("participations")
-              .select("*")
-              .eq("user_email", user.email);
-            setMyParticipations(data || []);
-          } catch (e) {
+          const { data: participationsData, error: participationsError } = await supabase
+            .from("participations")
+            .select("*")
+            .eq("user_email", user.email);
+
+          if (!participationsError && participationsData) {
+            console.log("✅ Participaciones cargadas:", participationsData.length);
+            setMyParticipations(participationsData);
+          } else {
+            console.log("⚠️ No hay participaciones o error:", participationsError);
             setMyParticipations([]);
           }
+        } catch (e) {
+          console.error("❌ Error cargando participaciones:", e);
+          setMyParticipations([]);
         }
       } else {
         setMyParticipations([]);
       }
     } catch (error) {
-      console.error("Error loading data:", error);
+      console.error("❌ Error general en loadData:", error);
     } finally {
       setLoading(false);
     }
@@ -147,9 +146,14 @@ export default function EventsPage() {
 
   const getAvailableEvents = () => {
     const myEventIds = myParticipations.map(p => p.event_id);
-    return events.filter(event => 
-      !myEventIds.includes(event.id) && event.status === 'upcoming'
-    );
+    // Filtrar eventos que no son míos y están activos/próximos
+    const available = events.filter(event => {
+      const isNotMine = !myEventIds.includes(event.id);
+      const isUpcoming = event.status === 'upcoming' || !event.status; // Si no tiene status, asumimos upcoming
+      return isNotMine && isUpcoming;
+    });
+    console.log("📋 Eventos disponibles:", available.length);
+    return available;
   };
 
   const openEventDetails = (event) => {
@@ -356,6 +360,13 @@ export default function EventsPage() {
       </div>
     );
   }
+
+  // Debug logs
+  console.log("🎯 Estado actual:");
+  console.log("- Total eventos:", events.length);
+  console.log("- Eventos disponibles:", getAvailableEvents().length);
+  console.log("- Mis eventos:", getMyEvents().length);
+  console.log("- Usuario actual:", currentUser?.email || "No autenticado");
 
   return (
     <div className="p-6 space-y-6">
