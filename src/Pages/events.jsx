@@ -6,11 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { MapPin, Calendar, Users, Plus, Heart, X, Clock } from "lucide-react";
+import { MapPin, Calendar, Users, Plus, Heart, X, Upload } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { format } from "date-fns";
-import { es } from "date-fns/locale";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function EventsPage() {
   const [events, setEvents] = useState([]);
@@ -20,26 +19,83 @@ export default function EventsPage() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showEventModal, setShowEventModal] = useState(false);
 
+  // Create modal state
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [creating, setCreating] = useState(false);
+  const [uploadingPhoto, setUploadingPhoto] = useState(false);
+  const [createPhotoUrl, setCreatePhotoUrl] = useState("");
+
+  const [createForm, setCreateForm] = useState({
+    title: "",
+    description: "",
+    address: "",
+    date: "",
+    time: "",
+    organizer_name: "",
+    country: "",
+    donation_goal: "",
+    max_participants: ""
+  });
+
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = async () => {
+    setLoading(true);
     try {
-      const [eventData, user] = await Promise.all([
-        CleanupEvent.list('-created_date'),
-        User.me()
-      ]);
-      
-      setEvents(eventData);
+      let eventData = [];
+      let user = null;
+
+      // Try to load events
+      try {
+        eventData = await CleanupEvent.list('-created_date');
+      } catch (err) {
+        console.warn("CleanupEvent.list failed, trying Supabase:", err);
+        const { data, error } = await supabase
+          .from("events")
+          .select("*")
+          .order("created_at", { ascending: false });
+        if (!error && data) eventData = data;
+      }
+
+      // Try to get current user
+      try {
+        user = await User.me();
+      } catch (e) {
+        console.warn("User.me() failed:", e);
+        // Try to get user from Supabase auth
+        const { data: { user: authUser } } = await supabase.auth.getUser();
+        if (authUser) {
+          user = { email: authUser.email, id: authUser.id };
+        }
+      }
+
+      setEvents(eventData || []);
       setCurrentUser(user);
-      
-      if (user) {
-        const participations = await Participation.filter(
-          { user_email: user.email },
-          '-created_date'
-        );
-        setMyParticipations(participations);
+
+      // Load participations if user exists
+      if (user && user.email) {
+        try {
+          const participations = await Participation.filter(
+            { user_email: user.email },
+            '-created_date'
+          );
+          setMyParticipations(participations || []);
+        } catch (err) {
+          console.warn("Participation.filter failed, trying Supabase:", err);
+          try {
+            const { data } = await supabase
+              .from("participations")
+              .select("*")
+              .eq("user_email", user.email);
+            setMyParticipations(data || []);
+          } catch (e) {
+            setMyParticipations([]);
+          }
+        }
+      } else {
+        setMyParticipations([]);
       }
     } catch (error) {
       console.error("Error loading data:", error);
@@ -49,15 +105,38 @@ export default function EventsPage() {
   };
 
   const joinEvent = async (eventId) => {
+    if (!currentUser || !currentUser.email) {
+      alert("⚠️ Debes iniciar sesión para unirte a un evento");
+      return;
+    }
+
     try {
-      await Participation.create({
-        event_id: eventId,
-        user_email: currentUser.email,
-        joined_date: new Date().toISOString().split('T')[0]
-      });
-      loadData();
+      // Try using Participation entity first
+      try {
+        await Participation.create({
+          event_id: eventId,
+          user_email: currentUser.email,
+          joined_date: new Date().toISOString().split('T')[0]
+        });
+      } catch (err) {
+        // Fallback to direct Supabase insert
+        const { error } = await supabase
+          .from("participations")
+          .insert([
+            {
+              event_id: eventId,
+              user_email: currentUser.email,
+              joined_date: new Date().toISOString().split('T')[0]
+            }
+          ]);
+        if (error) throw error;
+      }
+      
+      await loadData();
+      alert("✅ Te has unido al evento exitosamente");
     } catch (error) {
       console.error("Error joining event:", error);
+      alert("❌ Error al unirse al evento. Por favor intenta de nuevo.");
     }
   };
 
@@ -68,12 +147,121 @@ export default function EventsPage() {
 
   const getAvailableEvents = () => {
     const myEventIds = myParticipations.map(p => p.event_id);
-    return events.filter(event => !myEventIds.includes(event.id) && event.status === 'upcoming');
+    return events.filter(event => 
+      !myEventIds.includes(event.id) && event.status === 'upcoming'
+    );
   };
 
   const openEventDetails = (event) => {
     setSelectedEvent(event);
     setShowEventModal(true);
+  };
+
+  // Create modal handlers
+  const handleCreateInput = (field, value) => {
+    setCreateForm(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleCreatePhoto = async (files) => {
+    if (!files || files.length === 0) return;
+    
+    setUploadingPhoto(true);
+    try {
+      const file = files[0];
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
+      
+      const { data, error } = await supabase.storage
+        .from("event-photos")
+        .upload(fileName, file, {
+          cacheControl: '3600',
+          upsert: false
+        });
+        
+      if (error) throw error;
+
+      const { data: publicUrlData } = supabase.storage
+        .from("event-photos")
+        .getPublicUrl(fileName);
+        
+      setCreatePhotoUrl(publicUrlData.publicUrl);
+    } catch (err) {
+      console.error("Error uploading photo:", err);
+      alert("❌ Error subiendo la foto. Verifica que el bucket 'event-photos' exista en Supabase.");
+    } finally {
+      setUploadingPhoto(false);
+    }
+  };
+
+  const handleCreateSubmit = async (e) => {
+    e.preventDefault();
+    setCreating(true);
+    
+    try {
+      // Get user email
+      let userEmail = currentUser?.email;
+      if (!userEmail) {
+        const { data: { user: authUser } } = await supabase.auth.getUser();
+        userEmail = authUser?.email || "anonymous";
+      }
+
+      const payload = {
+        title: createForm.title.trim(),
+        description: createForm.description.trim() || null,
+        address: createForm.address.trim(),
+        date: createForm.date,
+        time: createForm.time,
+        organizer_name: createForm.organizer_name.trim(),
+        country: createForm.country.trim() || null,
+        organizer_photos: createPhotoUrl ? [createPhotoUrl] : [],
+        donation_goal: createForm.donation_goal ? parseFloat(createForm.donation_goal) : 0,
+        donations_received: 0,
+        max_participants: createForm.max_participants ? parseInt(createForm.max_participants) : null,
+        participants: [userEmail],
+        status: "upcoming",
+        materials_needed: [],
+        created_at: new Date().toISOString()
+      };
+
+      console.log("Creating event with payload:", payload);
+
+      const { data, error } = await supabase
+        .from("events")
+        .insert([payload])
+        .select();
+
+      if (error) {
+        console.error("Supabase error:", error);
+        throw error;
+      }
+
+      console.log("Event created successfully:", data);
+
+      // Reset form and close modal
+      setShowCreateModal(false);
+      setCreateForm({
+        title: "",
+        description: "",
+        address: "",
+        date: "",
+        time: "",
+        organizer_name: "",
+        country: "",
+        donation_goal: "",
+        max_participants: ""
+      });
+      setCreatePhotoUrl("");
+      
+      // Reload data
+      await loadData();
+      
+      alert("✅ Evento creado con éxito");
+    } catch (err) {
+      console.error("Error creating event:", err);
+      alert(`❌ Error creando evento: ${err.message || 'Error desconocido'}`);
+    } finally {
+      setCreating(false);
+    }
   };
 
   const EventCard = ({ event, showJoinButton = false }) => (
@@ -136,13 +324,22 @@ export default function EventsPage() {
           Ver Detalles
         </Button>
         {showJoinButton && (
-          <Button 
-            onClick={() => joinEvent(event.id)}
-            className="clay-button bg-mint-400 hover:bg-mint-500 text-white rounded-2xl"
-          >
-            <Heart className="w-4 h-4 mr-2" />
-            Unirse
-          </Button>
+          <div className="flex gap-2">
+            <Button 
+              onClick={() => joinEvent(event.id)}
+              className="clay-button bg-mint-400 hover:bg-mint-500 text-white rounded-2xl"
+            >
+              <Heart className="w-4 h-4 mr-2" />
+              Unirse
+            </Button>
+            {event.donation_goal > 0 && (
+              <Link to={createPageUrl(`Donations?event_id=${event.id}`)}>
+                <Button className="clay-button bg-coral-400 hover:bg-coral-500 text-white rounded-2xl">
+                  💰 Donar
+                </Button>
+              </Link>
+            )}
+          </div>
         )}
       </div>
     </div>
@@ -168,12 +365,13 @@ export default function EventsPage() {
           <h2 className="text-3xl font-black">Eventos de Limpieza</h2>
           <p className="text-gray-600">Colabora para limpiar nuestra ciudad.</p>
         </div>
-        <Link to={createPageUrl("CreateEvent")}>
-          <Button className="clay-button bg-lavender-400 hover:bg-lavender-500 text-black rounded-2xl shadow-lg shadow-lavender-300/50">
-            <Plus className="w-4 h-4 mr-2" />
-            Crear evento
-          </Button>
-        </Link>
+        <Button 
+          onClick={() => setShowCreateModal(true)}
+          className="clay-button bg-lavender-400 hover:bg-lavender-500 text-black rounded-2xl shadow-lg shadow-lavender-300/50"
+        >
+          <Plus className="w-4 h-4 mr-2" />
+          Crear evento
+        </Button>
       </div>
 
       {/* Tabs */}
@@ -288,7 +486,7 @@ export default function EventsPage() {
                       <div>
                         <p className="text-sm font-medium text-gray-700">Meta de donaciones</p>
                         <p className="text-sm text-gray-600">
-                          ${(selectedEvent.donations_received || 0).toLocaleString('es-CO')} COP / ${selectedEvent.donation_goal.toLocaleString('es-CO')} COP
+                          ${(selectedEvent.donations_received || 0).toLocaleString('es-CO')} / ${selectedEvent.donation_goal.toLocaleString('es-CO')} COP
                         </p>
                       </div>
                     </div>
@@ -336,6 +534,174 @@ export default function EventsPage() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Create Event Modal */}
+      {showCreateModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-6 relative clay-card max-h-[90vh] overflow-y-auto">
+            <button 
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10" 
+              onClick={() => setShowCreateModal(false)}
+              type="button"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <h3 className="text-xl font-semibold mb-4">Crear nuevo evento</h3>
+
+            <form onSubmit={handleCreateSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-1">Nombre del Evento *</label>
+                <input 
+                  required 
+                  value={createForm.title} 
+                  onChange={(e) => handleCreateInput("title", e.target.value)} 
+                  className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                  placeholder="Ej: Limpieza Parque Central"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Descripción</label>
+                <textarea 
+                  value={createForm.description} 
+                  onChange={(e) => handleCreateInput("description", e.target.value)} 
+                  className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                  rows="3"
+                  placeholder="Describe el evento..."
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Dirección *</label>
+                <input 
+                  required 
+                  value={createForm.address} 
+                  onChange={(e) => handleCreateInput("address", e.target.value)} 
+                  className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                  placeholder="Ej: Calle 123 #45-67"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-sm font-medium mb-1">Fecha *</label>
+                  <input 
+                    type="date" 
+                    required 
+                    value={createForm.date} 
+                    onChange={(e) => handleCreateInput("date", e.target.value)} 
+                    className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1">Hora *</label>
+                  <input 
+                    type="time" 
+                    required 
+                    value={createForm.time} 
+                    onChange={(e) => handleCreateInput("time", e.target.value)} 
+                    className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Nombre del Organizador *</label>
+                <input 
+                  required 
+                  value={createForm.organizer_name} 
+                  onChange={(e) => handleCreateInput("organizer_name", e.target.value)} 
+                  className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                  placeholder="Tu nombre"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">País</label>
+                <input 
+                  value={createForm.country} 
+                  onChange={(e) => handleCreateInput("country", e.target.value)} 
+                  className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                  placeholder="Ej: Colombia"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-sm font-medium mb-1">Meta de donaciones (COP)</label>
+                  <input 
+                    type="number" 
+                    value={createForm.donation_goal} 
+                    onChange={(e) => handleCreateInput("donation_goal", e.target.value)} 
+                    className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                    placeholder="0"
+                    min="0"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1">Máximo participantes</label>
+                  <input 
+                    type="number" 
+                    value={createForm.max_participants} 
+                    onChange={(e) => handleCreateInput("max_participants", e.target.value)} 
+                    className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-lavender-400"
+                    placeholder="Sin límite"
+                    min="1"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Foto del lugar</label>
+                <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-lavender-400 transition-colors">
+                  <input 
+                    id="create-photo" 
+                    type="file" 
+                    accept="image/*" 
+                    className="hidden" 
+                    onChange={(e) => handleCreatePhoto(e.target.files)} 
+                  />
+                  <label htmlFor="create-photo" className="cursor-pointer flex flex-col items-center">
+                    <Upload className="w-8 h-8 text-gray-400 mb-2" />
+                    <span className="text-sm text-gray-600">
+                      {uploadingPhoto ? "Subiendo..." : "Haz clic para subir una foto"}
+                    </span>
+                  </label>
+                </div>
+                {createPhotoUrl && (
+                  <div className="mt-3">
+                    <img 
+                      src={createPhotoUrl} 
+                      alt="Vista previa" 
+                      className="w-full h-40 object-cover rounded-xl clay-card" 
+                    />
+                  </div>
+                )}
+              </div>
+
+              <div className="flex gap-3 pt-2">
+                <Button 
+                  type="button" 
+                  onClick={() => setShowCreateModal(false)} 
+                  variant="outline"
+                  className="flex-1 rounded-xl"
+                  disabled={creating || uploadingPhoto}
+                >
+                  Cancelar
+                </Button>
+                <Button 
+                  type="submit" 
+                  disabled={creating || uploadingPhoto} 
+                  className="flex-1 bg-mint-500 hover:bg-mint-600 text-white rounded-xl"
+                >
+                  {creating ? "Creando..." : "Crear Evento"}
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
