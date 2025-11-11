@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CleanupEvent } from "@/entities/CleanupEvent";
-import { Donation } from "@/entities/Donation";
-import { User } from "@/entities/User";
+import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,10 +7,10 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Heart, CreditCard, Smartphone, Building, Check, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function DonationsPage() {
+  const navigate = useNavigate();
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [donationAmount, setDonationAmount] = useState("");
@@ -36,20 +34,34 @@ export default function DonationsPage() {
 
   const loadData = async () => {
     try {
-      const [eventData, user] = await Promise.all([
-        CleanupEvent.list('-created_date'),
-        User.me()
-      ]);
-      
-      setEvents(eventData.filter(e => e.donation_goal > 0));
+      // Obtener usuario actual
+      const { data: { user } } = await supabase.auth.getUser();
       setCurrentUser(user);
+
+      // Cargar eventos con meta de donaciones
+      const { data: eventsData } = await supabase
+        .from("events")
+        .select("*")
+        .gt("donation_goal", 0)
+        .order("created_at", { ascending: false });
+
+      setEvents(eventsData || []);
       
+      // Cargar donaciones del usuario
       if (user) {
-        const donations = await Donation.filter(
-          { donor_email: user.email },
-          '-created_date'
-        );
-        setMyDonations(donations);
+        const { data: donationsData } = await supabase
+          .from("donations")
+          .select(`
+            *,
+            events:event_id (
+              title,
+              address
+            )
+          `)
+          .eq("donor_email", user.email)
+          .order("created_at", { ascending: false });
+
+        setMyDonations(donationsData || []);
       }
     } catch (error) {
       console.error("Error loading data:", error);
@@ -60,10 +72,14 @@ export default function DonationsPage() {
 
   const loadEventForDonation = async (eventId) => {
     try {
-      const event = await CleanupEvent.list();
-      const foundEvent = event.find(e => e.id === eventId);
-      if (foundEvent && foundEvent.donation_goal > 0) {
-        setSelectedEvent(foundEvent);
+      const { data: event } = await supabase
+        .from("events")
+        .select("*")
+        .eq("id", eventId)
+        .single();
+
+      if (event && event.donation_goal > 0) {
+        setSelectedEvent(event);
       }
     } catch (error) {
       console.error("Error loading event:", error);
@@ -71,39 +87,59 @@ export default function DonationsPage() {
   };
 
   const handleDonation = async () => {
-    if (!selectedEvent || !donationAmount || !currentUser) return;
+    if (!selectedEvent || !donationAmount || !currentUser) {
+      alert("⚠️ Por favor completa todos los campos");
+      return;
+    }
     
     setProcessing(true);
     
     try {
-      // Simulate payment processing
+      const amount = parseFloat(donationAmount);
+      
+      if (amount < 1000) {
+        alert("⚠️ El monto mínimo de donación es $1.000 COP");
+        setProcessing(false);
+        return;
+      }
+
+      // Simular procesamiento de pago
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Create donation record
-      await Donation.create({
-        event_id: selectedEvent.id,
-        donor_email: currentUser.email,
-        donor_name: currentUser.full_name || currentUser.email,
-        amount: parseFloat(donationAmount),
-        message: donationMessage
-      });
+      // Crear registro de donación
+      const { error: donationError } = await supabase
+        .from("donations")
+        .insert([{
+          event_id: selectedEvent.id,
+          donor_email: currentUser.email,
+          donor_name: currentUser.user_metadata?.full_name || currentUser.email.split('@')[0],
+          amount: amount,
+          message: donationMessage || null,
+          payment_method: paymentMethod,
+          status: 'completed'
+        }]);
 
-      // Update event's donations_received
-      const newTotal = (selectedEvent.donations_received || 0) + parseFloat(donationAmount);
-      await CleanupEvent.update(selectedEvent.id, {
-        donations_received: newTotal
-      });
+      if (donationError) throw donationError;
 
-      // Reset form and reload data
+      // Actualizar el total de donaciones del evento
+      const newTotal = (selectedEvent.donations_received || 0) + amount;
+      const { error: updateError } = await supabase
+        .from("events")
+        .update({ donations_received: newTotal })
+        .eq("id", selectedEvent.id);
+
+      if (updateError) throw updateError;
+
+      // Reset form y recargar datos
       setDonationAmount("");
       setDonationMessage("");
       setSelectedEvent(null);
-      loadData();
+      await loadData();
       
-      alert(`¡Gracias por tu donación de $${parseFloat(donationAmount).toLocaleString('es-CO')} COP!`);
+      alert(`✅ ¡Gracias por tu donación de $${amount.toLocaleString('es-CO')} COP!`);
     } catch (error) {
       console.error("Error processing donation:", error);
-      alert("Error al procesar la donación. Por favor intenta de nuevo.");
+      alert("❌ Error al procesar la donación. Por favor intenta de nuevo.");
     } finally {
       setProcessing(false);
     }
@@ -225,7 +261,7 @@ export default function DonationsPage() {
                   placeholder="50000"
                   className="rounded-2xl"
                 />
-                <div className="flex gap-2 mt-2">
+                <div className="flex gap-2 mt-2 flex-wrap">
                   {[10000, 25000, 50000, 100000].map(amount => (
                     <Button
                       key={amount}
@@ -306,17 +342,24 @@ export default function DonationsPage() {
                   onChange={(e) => setDonationMessage(e.target.value)}
                   placeholder="Escribe un mensaje de apoyo..."
                   className="rounded-2xl"
+                  rows={3}
                 />
               </div>
 
               {/* Donate Button */}
               <Button
                 onClick={handleDonation}
-                disabled={!donationAmount || processing}
+                disabled={!donationAmount || processing || !currentUser}
                 className="w-full clay-button bg-coral-400 hover:bg-coral-500 text-white rounded-2xl py-3"
               >
                 {processing ? "Procesando..." : `Donar $${donationAmount ? parseFloat(donationAmount).toLocaleString('es-CO') : '0'} COP`}
               </Button>
+
+              {!currentUser && (
+                <p className="text-sm text-center text-red-600">
+                  Debes iniciar sesión para hacer una donación
+                </p>
+              )}
             </CardContent>
           </Card>
         </div>
@@ -324,10 +367,10 @@ export default function DonationsPage() {
         /* Events List and Donations History */
         <Tabs defaultValue="events" className="w-full">
           <TabsList className="grid w-full grid-cols-2 bg-gray-100 p-1.5 rounded-2xl">
-            <TabsTrigger value="events" className="rounded-[14px] text-gray-500 py-2 text-sm font-medium data-[state=active]:bg-white data-[state=active]:text-coral-500 data-[state=active]:font-semibold data-[state=active]:shadow-sm transition-all duration-200">
+            <TabsTrigger value="events" className="rounded-xl">
               Eventos
             </TabsTrigger>
-            <TabsTrigger value="history" className="rounded-[14px] text-gray-500 py-2 text-sm font-medium data-[state=active]:bg-white data-[state=active]:text-coral-500 data-[state=active]:font-semibold data-[state=active]:shadow-sm transition-all duration-200">
+            <TabsTrigger value="history" className="rounded-xl">
               Mis Donaciones
             </TabsTrigger>
           </TabsList>
@@ -352,15 +395,31 @@ export default function DonationsPage() {
               <div className="space-y-4">
                 {myDonations.map(donation => (
                   <Card key={donation.id} className="clay-card">
-                    <CardContent className="p-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="font-medium text-gray-800">
-                            ${donation.amount.toLocaleString('es-CO')} COP
+                    <CardContent className="p-5">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Heart className="w-5 h-5 text-coral-500" />
+                            <p className="font-semibold text-gray-800">
+                              ${donation.amount.toLocaleString('es-CO')} COP
+                            </p>
+                          </div>
+                          {donation.events && (
+                            <p className="text-sm text-gray-600 mb-1">
+                              {donation.events.title}
+                            </p>
+                          )}
+                          <p className="text-xs text-gray-500">
+                            {new Date(donation.created_at).toLocaleDateString('es-CO', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric'
+                            })}
                           </p>
-                          <p className="text-sm text-gray-600">{donation.created_date}</p>
                           {donation.message && (
-                            <p className="text-xs text-gray-500 mt-1">"{donation.message}"</p>
+                            <p className="text-sm text-gray-600 mt-2 italic">
+                              "{donation.message}"
+                            </p>
                           )}
                         </div>
                         <Check className="w-5 h-5 text-green-500" />

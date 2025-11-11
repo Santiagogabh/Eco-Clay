@@ -82,6 +82,9 @@ export default function LoginPage() {
           password: password,
           options: {
             emailRedirectTo: `${window.location.origin}/map`,
+            data: {
+              full_name: email.split('@')[0] // Nombre temporal del email
+            }
           }
         });
 
@@ -91,8 +94,15 @@ export default function LoginPage() {
           throw new Error("Este correo ya está registrado. Por favor inicia sesión.");
         }
 
-        alert("✅ Cuenta creada exitosamente. Revisa tu email para confirmar tu cuenta.");
-        setMode("login");
+        // Si la confirmación de email está deshabilitada, redirigir directamente
+        if (data.session) {
+          alert("✅ Cuenta creada exitosamente. ¡Bienvenido a Mapa Limpio!");
+          navigate("/map");
+        } else {
+          // Si requiere confirmación de email
+          alert("✅ Cuenta creada. Revisa tu email para confirmar y luego inicia sesión.");
+          setMode("login");
+        }
       } else {
         // Iniciar sesión
         const { error } = await supabase.auth.signInWithPassword({
