@@ -85,7 +85,7 @@ export default function LandingPage() {
             <div className="space-y-6">
               <div className="inline-block">
                 <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                  🌍 Juntos por un mundo más limpio
+                  Desarrollado por Santiago Hernandez
                 </span>
               </div>
               <h2 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight">
@@ -93,15 +93,15 @@ export default function LandingPage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-600"> transforma</span> el mundo
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Aplicación especializada para combatir la contaminación que producimos todos los días. 
-                Visualiza zonas afectadas, organiza eventos de limpieza y únete a una comunidad comprometida.
+                Visualiza los lugares mas contaminados. Conoce ambientalistas.
+                Crea y asiste a eventos de limpieza. Dona para apoyar causas ambientales.
               </p>
               <div className="flex gap-4">
                 <Button 
                   onClick={() => navigate("/login")}
                   className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl px-8 py-6 text-lg font-bold hover:shadow-xl hover:scale-105 transition-all"
                 >
-                  Comenzar Ahora
+                  Quiero ver como funciona
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
                 <Button 
