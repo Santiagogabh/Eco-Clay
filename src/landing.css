@@ -1,0 +1,217 @@
+/* === Estructura general === */
+.landing-wrapper {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #e6fff5);
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* === Menú === */
+.menu {
+  padding: 0.5rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  color: #1a1a1a;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ebf9f2;
+  transform: translateX(100%);
+  transition: transform 0.25s ease-in-out;
+  z-index: -1;
+}
+
+.link:hover::before {
+  transform: translateX(0);
+}
+
+.link:hover {
+  width: 130px;
+  color: #0b7d60;
+}
+
+.link-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.link-title {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.link:hover .link-title {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* === Hero === */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 3rem auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-text span {
+  color: #0fa97a;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 1rem 0 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary, .btn-light {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.9rem 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00b47d, #009977);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 180, 125, 0.4);
+}
+
+.btn-secondary {
+  border: 2px solid #ccc;
+  color: #333;
+  background: #fff;
+}
+
+.btn-secondary:hover {
+  border-color: #00b47d;
+  background: #f1fffa;
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* === Beneficios === */
+.benefits {
+  text-align: center;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 180, 125, 0.15);
+}
+
+.benefit-icon {
+  background: #e7fff3;
+  color: #009977;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+/* === CTA === */
+.cta {
+  text-align: center;
+  background: linear-gradient(90deg, #009977, #00b47d);
+  color: #fff;
+  padding: 4rem 2rem;
+  border-radius: 25px 25px 0 0;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-light {
+  background: #fff;
+  color: #00b47d;
+}
+
+.btn-light:hover {
+  background: #f1fffa;
+  transform: scale(1.05);
+}
+
+/* === Footer === */
+.footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
