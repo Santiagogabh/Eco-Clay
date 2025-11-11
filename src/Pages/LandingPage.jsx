@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MapPin, Calendar, Users, Heart, Sparkles, Play, ArrowRight } from "lucide-react";
-import "./landing.css"; // Archivo CSS único
+import "@/landing.css"; // Archivo CSS único
 
 export default function LandingPage() {
   const navigate = useNavigate();
