@@ -44,7 +44,7 @@ export default function LoginPage() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/map`,
+          redirectTo: 'https://mapalimpio.vercel.app/map',
           queryParams: {
             access_type: 'offline',
             prompt: 'consent',

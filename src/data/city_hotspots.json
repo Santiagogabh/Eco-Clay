@@ -1,0 +1,217 @@
+[
+  {
+    "city": "Ciudad de México",
+    "name": "Calle Dr. Lavista",
+    "address": "Dr. Rafael Lavista 144, Col. Doctores, Alcaldía Cuauhtémoc, CDMX",
+    "description": "Residuos industriales tóxicos y metales pesados",
+    "coordinates": [19.42, -99.15]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Eje 1 Norte, Colonia Vallejo",
+    "address": "Eje 1 Norte (Calz. Vallejo) entre Av. Vallejo y Av. J. J. Clouthier, Gustavo A. Madero, CDMX (tramo comercial/industrial)",
+    "description": "Alta concentración de partículas PM2.5",
+    "coordinates": [19.47, -99.13]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Calle Industria",
+    "address": "Av. de la Industria 170 (Col. Moctezuma 2a Sección), Venustiano Carranza, CDMX",
+    "description": "Residuos químicos y sólidos urbanos",
+    "coordinates": [19.43, -99.10]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Metro Indios Verdes (CETRAM)",
+    "address": "Av. Insurgentes Norte y Calzada Ticomán (Estación Indios Verdes), Gustavo A. Madero, CDMX",
+    "description": "Alto riesgo por emisiones vehiculares y partículas tóxicas",
+    "coordinates": [19.51, -99.13]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Calzada de Tlalpan (tramo)",
+    "address": "Calzada de Tlalpan 1560, Col. Miravalle / Benito Juárez, CDMX (tramo de alta congestión)",
+    "description": "Contaminación de aire y suelo",
+    "coordinates": [19.37, -99.15]
+  },
+
+  {
+    "city": "Guadalajara",
+    "name": "Blvd. Marcelino García Barragán #1421",
+    "address": "Blvd. Gral. Marcelino García Barragán 1421, esquina Calzada Olímpica, Guadalajara, Jalisco",
+    "description": "Contaminación industrial en corredor universitario",
+    "coordinates": [20.65, -103.32]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Parque Industrial El Salto",
+    "address": "Parque Industrial El Salto, El Salto, Jalisco (zona industrial y logística)",
+    "description": "Residuos peligrosos e industriales",
+    "coordinates": [20.54, -103.23]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Avenida Vallarta (tramo urbano)",
+    "address": "Av. Ignacio L. Vallarta, tramo central (por ejemplo Av. Ignacio L. Vallarta 1670 - referencia de tramo urbano)",
+    "description": "Contaminación vehicular elevada",
+    "coordinates": [20.67, -103.38]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Zona Industrial Miravalle",
+    "address": "Zona Industrial Miravalle (sector industrial, entre calles 10 y 14, Miravalle), Guadalajara",
+    "description": "Contaminación de aire y suelo por actividad industrial",
+    "coordinates": [20.63, -103.34]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Calle 5 de Mayo, Centro",
+    "address": "Calle 5 de Mayo 650, Centro Histórico, Guadalajara, Jalisco",
+    "description": "Residuos sólidos urbanos y polución",
+    "coordinates": [20.67, -103.35]
+  },
+
+  {
+    "city": "Monterrey",
+    "name": "Av. Miguel Alemán (Apodaca)",
+    "address": "Av. Miguel Alemán 120 (corredor Miguel Alemán, Apodaca), Nuevo León",
+    "description": "Emisiones industriales y acumulación de basura",
+    "coordinates": [25.78, -100.18]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Parque Industrial Apodaca",
+    "address": "Av. Parque Industrial Monterrey No. 13, Parque Industrial Apodaca, Apodaca, N.L.",
+    "description": "Residuos peligrosos no controlados (sector industrial)",
+    "coordinates": [25.77, -100.21]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Carretera a Colombia (Cadereyta)",
+    "address": "Carretera Monterrey–Reynosa / Carretera a Colombia (zona de refinería y terminales), Cadereyta Jiménez, N.L.",
+    "description": "Contaminación por actividades de refinación y transporte",
+    "coordinates": [25.52, -99.97]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Zona Centro",
+    "address": "Centro de Monterrey (ej. Zaragoza / Morelos, Plaza de Armas), Monterrey, N.L.",
+    "description": "Contaminación vehicular densa",
+    "coordinates": [25.67, -100.31]
+  },
+  {
+    "city": "Monterrey",
+    "name": "San Pedro Garza García (corredor comercial)",
+    "address": "Av. José Vasconcelos 402 (Paseo San Pedro) / zona comercial, San Pedro Garza García, N.L.",
+    "description": "Contaminación del aire por tráfico y concentración comercial",
+    "coordinates": [25.65, -100.37]
+  },
+
+  {
+    "city": "Tijuana",
+    "name": "Playa Blanca",
+    "address": "Carretera Tijuana–Ensenada (Playa Blanca, sector litoral sur de Tijuana) — referencia de tramo en la costa",
+    "description": "Contaminación bacteriológica elevada en playa/litoral",
+    "coordinates": [32.48, -117.13]
+  },
+  {
+    "city": "Tijuana",
+    "name": "Punta Bandera (zona sur)",
+    "address": "Fraccionamiento / Punta Bandera, Tijuana (tramo costero, código postal área 22550)",
+    "description": "Desechos sin tratamiento en el litoral",
+    "coordinates": [32.47, -117.13]
+  },
+  {
+    "city": "Tijuana",
+    "name": "Zona Centro",
+    "address": "Av. 5 de Mayo / Av. Revolución (Zona Centro de Tijuana) — tramo céntrico",
+    "description": "Residuos sólidos urbanos y polución comercial",
+    "coordinates": [32.52, -117.02]
+  },
+  {
+    "city": "Tijuana",
+    "name": "Río Tijuana (tramo urbano)",
+    "address": "Río Tijuana, tramo urbano cercano a la frontera y desagües (área del cauce urbano, referencia de tramo)",
+    "description": "Contaminación bacteriológica en cauce",
+    "coordinates": [32.54, -117.03]
+  },
+  {
+    "city": "Tijuana",
+    "name": "Zona Industrial del Río",
+    "address": "Zona del Río (área industrial/empresas) — Av. del Río / Zona Industrial Río, Tijuana",
+    "description": "Residuos líquidos contaminantes industriales",
+    "coordinates": [32.52, -117.01]
+  },
+
+  {
+    "city": "Lima",
+    "name": "Cercado de Lima (frente al Congreso)",
+    "address": "Plaza Bolívar / Av. Abancay s/n (Frente al Congreso de la República), Cercado de Lima",
+    "description": "Contaminación atmosférica y urbana (corredor central)",
+    "coordinates": [-12.05, -77.04]
+  },
+  {
+    "city": "Lima",
+    "name": "Hospital María Auxiliadora",
+    "address": "Av. Miguel Iglesias 968, San Juan de Miraflores (Hospital María Auxiliadora) — referencia de sede",
+    "description": "Contaminación urbana y residuos hospitalarios",
+    "coordinates": [-12.03, -76.94]
+  },
+  {
+    "city": "Lima",
+    "name": "Hospital Hipólito Unanue",
+    "address": "Av. César Vallejo 1390, El Agustino (Hospital Nacional Hipólito Unanue)",
+    "description": "Contaminación de aire y suelo en entorno hospitalario",
+    "coordinates": [-12.05, -77.01]
+  },
+  {
+    "city": "Lima",
+    "name": "Comas - Centro Santa Luzmila",
+    "address": "Av. Guillermo de la Fuente (sector Santa Luzmila), Comas, Lima (referencia de centro urbano)",
+    "description": "Residuos sólidos y contaminación aérea",
+    "coordinates": [-11.95, -77.05]
+  },
+  {
+    "city": "Lima / Callao",
+    "name": "Callao - Bellavista (zona portuaria)",
+    "address": "Av. 28 de Julio / Av. Colonial (Bellavista, Callao) — referencia de zona portuaria Bellavista",
+    "description": "Residuos y polución urbana portuaria",
+    "coordinates": [-12.06, -77.13]
+  },
+
+  {
+    "city": "Arequipa",
+    "name": "Parque Industrial Río Seco",
+    "address": "Parque Industrial Río Seco, F-3 / Lateral 5 Lt. 5A, Cerro Colorado, Arequipa (sector industrial Río Seco)",
+    "description": "Residuos tóxicos industriales (reportes y empresas en parque industrial)",
+    "coordinates": [-16.36, -71.56]
+  },
+  {
+    "city": "Arequipa",
+    "name": "Quebrada Huayco (zona agrícola/laderas)",
+    "address": "Quebrada (Huayco) - zona rural/agropecuaria próxima a Cerro Colorado (referencia de quebrada Huayco)",
+    "description": "Contaminación de agua y suelo en quebradas y áreas agrícolas",
+    "coordinates": [-16.41, -71.57]
+  },
+  {
+    "city": "Arequipa",
+    "name": "Calle Principal de Cerro Colorado",
+    "address": "Calle Principal, Cerro Colorado (vía principal del distrito, referencia local)",
+    "description": "Acumulación de residuos sólidos urbanos",
+    "coordinates": [-16.37, -71.55]
+  },
+  {
+    "city": "Arequipa",
+    "name": "Zona minera - Mariano Nicolás Valcárcel (Camaná)",
+    "address": "Distrito Mariano Nicolás Valcárcel, Provincia de Camaná (zona minera y centros poblados: Urasqui / Minas Miski) — referencia distrital",
+    "description": "Impacto por minería informal / ilegal",
+    "coordinates": [-16.68, -72.25]
+  },
+  {
+    "city": "Arequipa",
+    "name": "Zona agrícola de Uchumayo",
+    "address": "Distrito de Uchumayo (áreas agrícolas y cauces de vertido), Arequipa (referencia distrital)",
+    "description": "Contaminación por vertidos industriales en zonas agrícolas",
+    "coordinates": [-16.43, -71.68]
+  }
+]
