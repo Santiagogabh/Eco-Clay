@@ -213,5 +213,146 @@
     "address": "Distrito de Uchumayo (áreas agrícolas y cauces de vertido), Arequipa (referencia distrital)",
     "description": "Contaminación por vertidos industriales en zonas agrícolas",
     "coordinates": [-16.43, -71.68]
+  },
+
+  {
+    "city": "Bogotá",
+    "name": "Avenida Boyacá con Calle 13",
+    "address": "Av. Boyacá con Calle 13, Localidad Fontibón, Bogotá D.C.",
+    "description": "Intersección con alto flujo de camiones y buses; altos niveles de material particulado (PM2.5).",
+    "coordinates": [4.6618, -74.1187]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Avenida Ciudad de Cali con Avenida de las Américas",
+    "address": "Av. Ciudad de Cali con Av. de las Américas, Localidad Kennedy, Bogotá D.C.",
+    "description": "Zona de congestión y actividad industrial ligera, aire con partículas tóxicas persistentes.",
+    "coordinates": [4.6332, -74.1518]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 80 (Zona de Engativá)",
+    "address": "Calle 80 entre Carrera 100 y Carrera 114, Localidad Engativá, Bogotá D.C.",
+    "description": "Tramo con tráfico pesado y contaminación de aire por transporte y polvo en suspensión.",
+    "coordinates": [4.7091, -74.1089]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Avenida Caracas (Centro)",
+    "address": "Av. Caracas entre Calle 13 y Calle 72, Bogotá D.C.",
+    "description": "Eje vial con alta contaminación vehicular y ruido urbano; niveles elevados de CO y NO₂.",
+    "coordinates": [4.6199, -74.0699]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 13 (Tramo Industrial Fontibón)",
+    "address": "Calle 13 entre Carrera 100 y Carrera 123, Fontibón, Bogotá D.C.",
+    "description": "Corredor industrial con emisiones de transporte pesado y polvo de carga.",
+    "coordinates": [4.6631, -74.1449]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Autopista Sur (Sector Venecia)",
+    "address": "Autopista Sur con Calle 45 Sur, Sector Venecia, Tunjuelito, Bogotá D.C.",
+    "description": "Emisiones vehiculares y polvo de frenos en corredor con alto tráfico diario.",
+    "coordinates": [4.5771, -74.1387]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Avenida Primero de Mayo con Carrera 68",
+    "address": "Av. 1° de Mayo con Cra. 68, Kennedy, Bogotá D.C.",
+    "description": "Zona mixta residencial e industrial, frecuentes picos de contaminación atmosférica.",
+    "coordinates": [4.6162, -74.1263]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 26 (Avenida El Dorado)",
+    "address": "Calle 26 desde Av. Ciudad de Cali hasta Av. NQS, Bogotá D.C.",
+    "description": "Emisiones constantes de vehículos, especialmente en horas pico.",
+    "coordinates": [4.6569, -74.1081]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Carrera 30 (Avenida NQS)",
+    "address": "Carrera 30 entre Calle 13 y Calle 80, Teusaquillo / Barrios Unidos, Bogotá D.C.",
+    "description": "Tramo con altísima densidad de buses y camiones; contaminación de aire y ruido.",
+    "coordinates": [4.6488, -74.0891]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 63 con Carrera 24",
+    "address": "Calle 63 con Cra. 24, Barrios Unidos, Bogotá D.C.",
+    "description": "Zona con tráfico vehicular intenso y poca ventilación urbana.",
+    "coordinates": [4.6548, -74.0764]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Carrera Séptima (Centro Internacional)",
+    "address": "Carrera 7 entre Calle 26 y Calle 45, Bogotá D.C.",
+    "description": "Eje central con contaminación crónica por transporte y emisiones diésel.",
+    "coordinates": [4.6213, -74.0682]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 19 con Carrera 10",
+    "address": "Calle 19 con Cra. 10, Centro Histórico, Bogotá D.C.",
+    "description": "Alta densidad de buses antiguos y contaminación sonora, suelo urbano deteriorado.",
+    "coordinates": [4.6037, -74.0731]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Carrera 10 (Suroriente)",
+    "address": "Carrera 10 entre Calle 6 Sur y Calle 30 Sur, San Cristóbal, Bogotá D.C.",
+    "description": "Tramo de tráfico constante y emisiones en pendiente; mala calidad del aire.",
+    "coordinates": [4.5837, -74.0889]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 38 Sur con Carrera 68",
+    "address": "Calle 38 Sur con Cra. 68, Kennedy, Bogotá D.C.",
+    "description": "Zona industrial y de bodegas con emisiones constantes de transporte y polvo.",
+    "coordinates": [4.6078, -74.1412]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Río Tunjuelo (Tramo Tunjuelito)",
+    "address": "Río Tunjuelo, tramo entre Av. Villavicencio y Autopista Sur, Bogotá D.C.",
+    "description": "Contaminación hídrica severa por vertimientos industriales y domésticos.",
+    "coordinates": [4.5749, -74.1303]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Relleno Sanitario Doña Juana",
+    "address": "Km 11, Vía Mochuelo Bajo, Ciudad Bolívar, Bogotá D.C.",
+    "description": "Emisión de gases y lixiviados; zona de riesgo ambiental crónico.",
+    "coordinates": [4.5198, -74.1457]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Avenida Villavicencio con Autopista Sur",
+    "address": "Av. Villavicencio con Autopista Sur, Ciudad Bolívar, Bogotá D.C.",
+    "description": "Zona de tráfico pesado con niveles altos de PM10.",
+    "coordinates": [4.5645, -74.1521]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Carrera 68 con Calle 80",
+    "address": "Cra. 68 con Calle 80, Engativá, Bogotá D.C.",
+    "description": "Congestión vial, contaminación por buses y autos de carga.",
+    "coordinates": [4.6822, -74.0893]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 170 (Tramo Autopista Norte)",
+    "address": "Calle 170 entre Cra. 7 y Autopista Norte, Usaquén, Bogotá D.C.",
+    "description": "Zona de tráfico masivo y obras urbanas, polvo y emisiones concentradas.",
+    "coordinates": [4.7562, -74.0438]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Calle 116 con Autopista Norte",
+    "address": "Calle 116 con Autopista Norte, Suba / Usaquén, Bogotá D.C.",
+    "description": "Alta contaminación por flujo continuo de transporte particular y buses intermunicipales.",
+    "coordinates": [4.7009, -74.0487]
   }
 ]
