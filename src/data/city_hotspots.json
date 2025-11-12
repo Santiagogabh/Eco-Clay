@@ -1,218 +1,2051 @@
 [
-  {
+    {
     "city": "Ciudad de México",
-    "name": "Calle Dr. Lavista",
-    "address": "Dr. Rafael Lavista 144, Col. Doctores, Alcaldía Cuauhtémoc, CDMX",
-    "description": "Residuos industriales tóxicos y metales pesados",
-    "coordinates": [19.42, -99.15]
+    "name": "Zona Industrial Vallejo",
+    "address": "Av. Vallejo, Col. Vallejo, Alcaldía Gustavo A. Madero, CDMX",
+    "description": "Contaminación industrial histórica, metales pesados en suelo",
+    "state": "Crítico",
+    "coordinates": [19.47, -99.15]
   },
   {
     "city": "Ciudad de México",
-    "name": "Eje 1 Norte, Colonia Vallejo",
-    "address": "Eje 1 Norte (Calz. Vallejo) entre Av. Vallejo y Av. J. J. Clouthier, Gustavo A. Madero, CDMX (tramo comercial/industrial)",
-    "description": "Alta concentración de partículas PM2.5",
-    "coordinates": [19.47, -99.13]
-  },
-  {
-    "city": "Ciudad de México",
-    "name": "Calle Industria",
-    "address": "Av. de la Industria 170 (Col. Moctezuma 2a Sección), Venustiano Carranza, CDMX",
-    "description": "Residuos químicos y sólidos urbanos",
-    "coordinates": [19.43, -99.10]
-  },
-  {
-    "city": "Ciudad de México",
-    "name": "Metro Indios Verdes (CETRAM)",
-    "address": "Av. Insurgentes Norte y Calzada Ticomán (Estación Indios Verdes), Gustavo A. Madero, CDMX",
-    "description": "Alto riesgo por emisiones vehiculares y partículas tóxicas",
+    "name": "Río de los Remedios",
+    "address": "Río de los Remedios, intersección con Av. Insurgentes Norte",
+    "description": "Aguas residuales sin tratar, contaminación orgánica severa",
+    "state": "Crítico",
     "coordinates": [19.51, -99.13]
   },
   {
     "city": "Ciudad de México",
-    "name": "Calzada de Tlalpan (tramo)",
-    "address": "Calzada de Tlalpan 1560, Col. Miravalle / Benito Juárez, CDMX (tramo de alta congestión)",
-    "description": "Contaminación de aire y suelo",
-    "coordinates": [19.37, -99.15]
-  },
-
-  {
-    "city": "Guadalajara",
-    "name": "Blvd. Marcelino García Barragán #1421",
-    "address": "Blvd. Gral. Marcelino García Barragán 1421, esquina Calzada Olímpica, Guadalajara, Jalisco",
-    "description": "Contaminación industrial en corredor universitario",
-    "coordinates": [20.65, -103.32]
+    "name": "Central de Abasto",
+    "address": "Av. Canal de Tezontle, Iztapalapa, CDMX",
+    "description": "Residuos orgánicos, lixiviados, contaminación de suelo",
+    "state": "Malo",
+    "coordinates": [19.38, -99.09]
   },
   {
-    "city": "Guadalajara",
-    "name": "Parque Industrial El Salto",
-    "address": "Parque Industrial El Salto, El Salto, Jalisco (zona industrial y logística)",
-    "description": "Residuos peligrosos e industriales",
-    "coordinates": [20.54, -103.23]
+    "city": "Ciudad de México",
+    "name": "Circuito Interior",
+    "address": "Circuito Interior, tramo Viaducto-Revolución",
+    "description": "Alta concentración de partículas PM2.5 y óxidos de nitrógeno",
+    "state": "Crítico",
+    "coordinates": [19.40, -99.17]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Ex Refinería 18 de Marzo",
+    "address": "Calz. Azcapotzalco La Villa, Azcapotzalco",
+    "description": "Suelo contaminado con hidrocarburos, requiere remediación",
+    "state": "Crítico",
+    "coordinates": [19.48, -99.18]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Parque Industrial Xalostoc",
+    "address": "Zona Industrial Xalostoc, Ecatepec, Estado de México",
+    "description": "Emisiones industriales, contaminación atmosférica",
+    "state": "Malo",
+    "coordinates": [19.53, -99.05]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Av. Insurgentes Norte corredor",
+    "address": "Insurgentes Norte, tramo La Raza-Indios Verdes",
+    "description": "Contaminación vehicular, fácil de mejorar con transporte público",
+    "state": "Fácil de limpiar",
+    "coordinates": [19.50, -99.14]
   },
   {
     "city": "Guadalajara",
-    "name": "Avenida Vallarta (tramo urbano)",
-    "address": "Av. Ignacio L. Vallarta, tramo central (por ejemplo Av. Ignacio L. Vallarta 1670 - referencia de tramo urbano)",
-    "description": "Contaminación vehicular elevada",
-    "coordinates": [20.67, -103.38]
+    "name": "Río Santiago en El Salto",
+    "address": "Río Santiago, El Salto, Jalisco",
+    "description": "Descargas industriales químicas, metales pesados",
+    "state": "Crítico",
+    "coordinates": [20.52, -103.18]
   },
   {
     "city": "Guadalajara",
-    "name": "Zona Industrial Miravalle",
-    "address": "Zona Industrial Miravalle (sector industrial, entre calles 10 y 14, Miravalle), Guadalajara",
-    "description": "Contaminación de aire y suelo por actividad industrial",
-    "coordinates": [20.63, -103.34]
+    "name": "Corredor Industrial Tlajomulco",
+    "address": "Carretera Guadalajara-Morelia, Tlajomulco",
+    "description": "Emisiones industriales, manejo inadecuado de residuos",
+    "state": "Malo",
+    "coordinates": [20.57, -103.45]
   },
   {
     "city": "Guadalajara",
-    "name": "Calle 5 de Mayo, Centro",
-    "address": "Calle 5 de Mayo 650, Centro Histórico, Guadalajara, Jalisco",
-    "description": "Residuos sólidos urbanos y polución",
-    "coordinates": [20.67, -103.35]
+    "name": "Basurero de Picachos",
+    "address": "Carretera a Tesistán, Zapopan, Jalisco",
+    "description": "Lixiviados, contaminación de acuíferos",
+    "state": "Crítico",
+    "coordinates": [20.75, -103.45]
   },
-
+  {
+    "city": "Guadalajara",
+    "name": "Zona Industrial El Álamo",
+    "address": "Parque Industrial El Álamo, Guadalajara",
+    "description": "Emisiones de COVs y partículas suspendidas",
+    "state": "Malo",
+    "coordinates": [20.64, -103.31]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Av. Lázaro Cárdenas",
+    "address": "Av. Lázaro Cárdenas, tramo centro",
+    "description": "Contaminación vehicular alta, mejora con BRT",
+    "state": "Fácil de limpiar",
+    "coordinates": [20.68, -103.35]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Río Blanco",
+    "address": "Cauce del Río Blanco, zona metropolitana",
+    "description": "Descargas residuales urbanas e industriales",
+    "state": "Malo",
+    "coordinates": [20.70, -103.38]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Mercado de Abastos",
+    "address": "Calz. Dr. Roberto Michel, Guadalajara",
+    "description": "Residuos orgánicos, manejo mejorable",
+    "state": "Fácil de limpiar",
+    "coordinates": [20.65, -103.33]
+  },
   {
     "city": "Monterrey",
-    "name": "Av. Miguel Alemán (Apodaca)",
-    "address": "Av. Miguel Alemán 120 (corredor Miguel Alemán, Apodaca), Nuevo León",
-    "description": "Emisiones industriales y acumulación de basura",
+    "name": "Zona Industrial Apodaca",
+    "address": "Parque Industrial Apodaca, Nuevo León",
+    "description": "Emisiones industriales metalmecánicas",
+    "state": "Malo",
     "coordinates": [25.78, -100.18]
   },
   {
     "city": "Monterrey",
-    "name": "Parque Industrial Apodaca",
-    "address": "Av. Parque Industrial Monterrey No. 13, Parque Industrial Apodaca, Apodaca, N.L.",
-    "description": "Residuos peligrosos no controlados (sector industrial)",
-    "coordinates": [25.77, -100.21]
-  },
-  {
-    "city": "Monterrey",
-    "name": "Carretera a Colombia (Cadereyta)",
-    "address": "Carretera Monterrey–Reynosa / Carretera a Colombia (zona de refinería y terminales), Cadereyta Jiménez, N.L.",
-    "description": "Contaminación por actividades de refinación y transporte",
-    "coordinates": [25.52, -99.97]
-  },
-  {
-    "city": "Monterrey",
-    "name": "Zona Centro",
-    "address": "Centro de Monterrey (ej. Zaragoza / Morelos, Plaza de Armas), Monterrey, N.L.",
-    "description": "Contaminación vehicular densa",
+    "name": "Río Santa Catarina (urbano)",
+    "address": "Cauce Río Santa Catarina, zona centro",
+    "description": "Descargas irregulares, residuos sólidos",
+    "state": "Malo",
     "coordinates": [25.67, -100.31]
   },
   {
     "city": "Monterrey",
-    "name": "San Pedro Garza García (corredor comercial)",
-    "address": "Av. José Vasconcelos 402 (Paseo San Pedro) / zona comercial, San Pedro Garza García, N.L.",
-    "description": "Contaminación del aire por tráfico y concentración comercial",
-    "coordinates": [25.65, -100.37]
-  },
-
-  {
-    "city": "Tijuana",
-    "name": "Playa Blanca",
-    "address": "Carretera Tijuana–Ensenada (Playa Blanca, sector litoral sur de Tijuana) — referencia de tramo en la costa",
-    "description": "Contaminación bacteriológica elevada en playa/litoral",
-    "coordinates": [32.48, -117.13]
+    "name": "Parque Fundidora (histórico)",
+    "address": "Av. Fundidora y Acero, Monterrey",
+    "description": "Suelo contaminado histórico por fundición (en remediación)",
+    "state": "Malo",
+    "coordinates": [25.68, -100.28]
   },
   {
-    "city": "Tijuana",
-    "name": "Punta Bandera (zona sur)",
-    "address": "Fraccionamiento / Punta Bandera, Tijuana (tramo costero, código postal área 22550)",
-    "description": "Desechos sin tratamiento en el litoral",
-    "coordinates": [32.47, -117.13]
+    "city": "Monterrey",
+    "name": "Av. Constitución corredor",
+    "address": "Av. Constitución, centro de Monterrey",
+    "description": "Contaminación vehicular, mejora con movilidad",
+    "state": "Fácil de limpiar",
+    "coordinates": [25.67, -100.32]
   },
   {
-    "city": "Tijuana",
-    "name": "Zona Centro",
-    "address": "Av. 5 de Mayo / Av. Revolución (Zona Centro de Tijuana) — tramo céntrico",
-    "description": "Residuos sólidos urbanos y polución comercial",
-    "coordinates": [32.52, -117.02]
+    "city": "Monterrey",
+    "name": "Zona Industrial García",
+    "address": "Parque Industrial García, Nuevo León",
+    "description": "Emisiones industriales diversas",
+    "state": "Malo",
+    "coordinates": [25.81, -100.58]
   },
   {
-    "city": "Tijuana",
-    "name": "Río Tijuana (tramo urbano)",
-    "address": "Río Tijuana, tramo urbano cercano a la frontera y desagües (área del cauce urbano, referencia de tramo)",
-    "description": "Contaminación bacteriológica en cauce",
-    "coordinates": [32.54, -117.03]
+    "city": "Monterrey",
+    "name": "Tiradero La Silla (cerrado)",
+    "address": "Zona La Silla, Guadalupe, Nuevo León",
+    "description": "Ex tiradero, requiere monitoreo de lixiviados",
+    "state": "Malo",
+    "coordinates": [25.66, -100.24]
   },
   {
-    "city": "Tijuana",
-    "name": "Zona Industrial del Río",
-    "address": "Zona del Río (área industrial/empresas) — Av. del Río / Zona Industrial Río, Tijuana",
-    "description": "Residuos líquidos contaminantes industriales",
-    "coordinates": [32.52, -117.01]
-  },
-
-  {
-    "city": "Lima",
-    "name": "Cercado de Lima (frente al Congreso)",
-    "address": "Plaza Bolívar / Av. Abancay s/n (Frente al Congreso de la República), Cercado de Lima",
-    "description": "Contaminación atmosférica y urbana (corredor central)",
-    "coordinates": [-12.05, -77.04]
+    "city": "Monterrey",
+    "name": "Vía Rápida Lincoln",
+    "address": "Av. Abraham Lincoln, San Nicolás",
+    "description": "Alta densidad vehicular, contaminación atmosférica",
+    "state": "Fácil de limpiar",
+    "coordinates": [25.74, -100.28]
   },
   {
     "city": "Lima",
-    "name": "Hospital María Auxiliadora",
-    "address": "Av. Miguel Iglesias 968, San Juan de Miraflores (Hospital María Auxiliadora) — referencia de sede",
-    "description": "Contaminación urbana y residuos hospitalarios",
-    "coordinates": [-12.03, -76.94]
+    "name": "Río Rímac industrial",
+    "address": "Río Rímac, distrito El Agustino",
+    "description": "Descargas industriales y mineras, metales pesados",
+    "state": "Crítico",
+    "coordinates": [-12.04, -76.98]
   },
   {
     "city": "Lima",
-    "name": "Hospital Hipólito Unanue",
-    "address": "Av. César Vallejo 1390, El Agustino (Hospital Nacional Hipólito Unanue)",
-    "description": "Contaminación de aire y suelo en entorno hospitalario",
-    "coordinates": [-12.05, -77.01]
+    "name": "Zona Industrial Villa El Salvador",
+    "address": "Parque Industrial Villa El Salvador",
+    "description": "Pequeña industria, manejo deficiente de residuos",
+    "state": "Malo",
+    "coordinates": [-12.21, -76.94]
   },
   {
     "city": "Lima",
-    "name": "Comas - Centro Santa Luzmila",
-    "address": "Av. Guillermo de la Fuente (sector Santa Luzmila), Comas, Lima (referencia de centro urbano)",
-    "description": "Residuos sólidos y contaminación aérea",
-    "coordinates": [-11.95, -77.05]
+    "name": "Playa Agua Dulce",
+    "address": "Playa Agua Dulce, Chorrillos",
+    "description": "Contaminación fecal por descargas, recuperable",
+    "state": "Fácil de limpiar",
+    "coordinates": [-12.17, -77.01]
   },
   {
-    "city": "Lima / Callao",
-    "name": "Callao - Bellavista (zona portuaria)",
-    "address": "Av. 28 de Julio / Av. Colonial (Bellavista, Callao) — referencia de zona portuaria Bellavista",
-    "description": "Residuos y polución urbana portuaria",
-    "coordinates": [-12.06, -77.13]
-  },
-
-  {
-    "city": "Arequipa",
-    "name": "Parque Industrial Río Seco",
-    "address": "Parque Industrial Río Seco, F-3 / Lateral 5 Lt. 5A, Cerro Colorado, Arequipa (sector industrial Río Seco)",
-    "description": "Residuos tóxicos industriales (reportes y empresas en parque industrial)",
-    "coordinates": [-16.36, -71.56]
+    "city": "Lima",
+    "name": "Av. Javier Prado Este",
+    "address": "Av. Javier Prado Este, La Molina-San Borja",
+    "description": "Contaminación vehicular alta",
+    "state": "Fácil de limpiar",
+    "coordinates": [-12.08, -76.98]
   },
   {
-    "city": "Arequipa",
-    "name": "Quebrada Huayco (zona agrícola/laderas)",
-    "address": "Quebrada (Huayco) - zona rural/agropecuaria próxima a Cerro Colorado (referencia de quebrada Huayco)",
-    "description": "Contaminación de agua y suelo en quebradas y áreas agrícolas",
-    "coordinates": [-16.41, -71.57]
+    "city": "Lima",
+    "name": "Zona Industrial Ate",
+    "address": "Carretera Central, distrito Ate",
+    "description": "Curtiembres y textiles, contaminación hídrica",
+    "state": "Malo",
+    "coordinates": [-12.03, -76.93]
   },
   {
-    "city": "Arequipa",
-    "name": "Calle Principal de Cerro Colorado",
-    "address": "Calle Principal, Cerro Colorado (vía principal del distrito, referencia local)",
-    "description": "Acumulación de residuos sólidos urbanos",
-    "coordinates": [-16.37, -71.55]
+    "city": "Lima",
+    "name": "Ventanilla industrial",
+    "address": "Zona industrial Ventanilla, Callao",
+    "description": "Industria pesada, emisiones atmosféricas",
+    "state": "Malo",
+    "coordinates": [-11.88, -77.13]
   },
   {
-    "city": "Arequipa",
-    "name": "Zona minera - Mariano Nicolás Valcárcel (Camaná)",
-    "address": "Distrito Mariano Nicolás Valcárcel, Provincia de Camaná (zona minera y centros poblados: Urasqui / Minas Miski) — referencia distrital",
-    "description": "Impacto por minería informal / ilegal",
-    "coordinates": [-16.68, -72.25]
+    "city": "Lima",
+    "name": "Humedales de Ventanilla (amenazados)",
+    "address": "Humedales de Ventanilla, Callao",
+    "description": "Presión urbana e industrial, recuperable",
+    "state": "Fácil de limpiar",
+    "coordinates": [-11.87, -77.12]
   },
   {
-    "city": "Arequipa",
-    "name": "Zona agrícola de Uchumayo",
-    "address": "Distrito de Uchumayo (áreas agrícolas y cauces de vertido), Arequipa (referencia distrital)",
-    "description": "Contaminación por vertidos industriales en zonas agrícolas",
-    "coordinates": [-16.43, -71.68]
+    "city": "Santiago de Chile",
+    "name": "Polpaico (periferia)",
+    "address": "Zona industrial Polpaico, Región Metropolitana",
+    "description": "Cementeras, contaminación atmosférica por partículas",
+    "state": "Malo",
+    "coordinates": [-33.18, -70.95]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Río Mapocho urbano",
+    "address": "Río Mapocho, tramo centro de Santiago",
+    "description": "Contaminación histórica, mejorando con plantas de tratamiento",
+    "state": "Fácil de limpiar",
+    "coordinates": [-33.43, -70.64]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Av. Américo Vespucio Sur",
+    "address": "Av. Américo Vespucio Sur, La Florida",
+    "description": "Congestión vehicular severa",
+    "state": "Fácil de limpiar",
+    "coordinates": [-33.52, -70.60]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Parque Industrial Quilicura",
+    "address": "Quilicura, Región Metropolitana",
+    "description": "Zona industrial diversa, emisiones controlables",
+    "state": "Malo",
+    "coordinates": [-33.36, -70.73]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Estación Central industrial",
+    "address": "Comuna Estación Central",
+    "description": "Pequeña y mediana industria",
+    "state": "Malo",
+    "coordinates": [-33.46, -70.70]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Vertedero Santa Marta (cerrado)",
+    "address": "Ex vertedero Santa Marta, Talagante",
+    "description": "Cerrado pero requiere monitoreo",
+    "state": "Malo",
+    "coordinates": [-33.68, -70.93]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Cerro Renca minas abandonadas",
+    "address": "Cerro Renca, Quilicura",
+    "description": "Pasivos mineros, requiere limpieza",
+    "state": "Malo",
+    "coordinates": [-33.34, -70.74]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Riachuelo Cuenca Matanza",
+    "address": "Cuenca Matanza-Riachuelo, Villa Inflamable",
+    "description": "Una de las cuencas más contaminadas del mundo, metales pesados",
+    "state": "Crítico",
+    "coordinates": [-34.66, -58.35]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Polo Petroquímico Dock Sud",
+    "address": "Dock Sud, Avellaneda",
+    "description": "Industria petroquímica, plomo y otros contaminantes",
+    "state": "Crítico",
+    "coordinates": [-34.65, -58.34]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Av. General Paz",
+    "address": "Av. General Paz, cinturón metropolitano",
+    "description": "Contaminación vehicular intensa",
+    "state": "Fácil de limpiar",
+    "coordinates": [-34.60, -58.50]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "CEAMSE Norte III",
+    "address": "Relleno sanitario Norte III, José León Suárez",
+    "description": "Relleno sanitario, gestión de lixiviados necesaria",
+    "state": "Malo",
+    "coordinates": [-34.52, -58.56]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Parque Industrial Pilar",
+    "address": "Parque Industrial Pilar, Buenos Aires",
+    "description": "Zona industrial diversa",
+    "state": "Malo",
+    "coordinates": [-34.45, -58.90]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Av. 9 de Julio",
+    "address": "Av. 9 de Julio, centro de Buenos Aires",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [-34.60, -58.38]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Zona Wilde industrial",
+    "address": "Wilde, Avellaneda",
+    "description": "Industria química y metalúrgica",
+    "state": "Malo",
+    "coordinates": [-34.70, -58.32]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Rio Tietê urbano",
+    "address": "Rio Tietê, tramo Penha-Pinheiros",
+    "description": "Contaminación orgánica severa, esgotos",
+    "state": "Crítico",
+    "coordinates": [-23.52, -46.62]
+  },
+  {
+    "city": "São Paulo",
+    "name": "ABC Paulista industrial",
+    "address": "Região ABC, Santo André-São Bernardo",
+    "description": "Corredor industrial automotriz",
+    "state": "Malo",
+    "coordinates": [-23.66, -46.53]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Marginal Tietê",
+    "address": "Via Marginal Tietê",
+    "description": "Una de las vías más contaminadas, tráfico intenso",
+    "state": "Fácil de limpiar",
+    "coordinates": [-23.52, -46.63]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Zona Leste industrial",
+    "address": "Zona Leste, São Miguel Paulista",
+    "description": "Pequeña y mediana industria",
+    "state": "Malo",
+    "coordinates": [-23.50, -46.44]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Av. Paulista",
+    "address": "Avenida Paulista",
+    "description": "Contaminación vehicular, mejora con restricciones",
+    "state": "Fácil de limpiar",
+    "coordinates": [-23.56, -46.66]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Aterro Bandeirantes",
+    "address": "Aterro sanitário Bandeirantes, Perus",
+    "description": "Relleno cerrado, genera biogás aprovechable",
+    "state": "Malo",
+    "coordinates": [-23.42, -46.77]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Córrego Água Espraiada",
+    "address": "Córrego Água Espraiada, zona sul",
+    "description": "Contaminación urbana por esgotos",
+    "state": "Fácil de limpiar",
+    "coordinates": [-23.62, -46.67]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Baía de Guanabara",
+    "address": "Baía de Guanabara, zona norte",
+    "description": "Contaminación por esgoto y residuos industriales",
+    "state": "Crítico",
+    "coordinates": [-22.85, -43.17]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Zona Portuária",
+    "address": "Porto do Rio, região portuária",
+    "description": "Contaminación industrial histórica, en revitalización",
+    "state": "Malo",
+    "coordinates": [-22.89, -43.18]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Linha Vermelha",
+    "address": "Via Expressa Linha Vermelha",
+    "description": "Alta contaminación vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [-22.87, -43.27]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Complexo de Alemão",
+    "address": "Complexo de favelas do Alemão",
+    "description": "Falta de saneamiento básico",
+    "state": "Malo",
+    "coordinates": [-22.86, -43.26]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Lagoa Rodrigo de Freitas",
+    "address": "Lagoa Rodrigo de Freitas, zona sul",
+    "description": "Eutrofización, recuperable con saneamiento",
+    "state": "Fácil de limpiar",
+    "coordinates": [-22.97, -43.21]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Duque de Caxias refinería",
+    "address": "Refinería Duque de Caxias (REDUC)",
+    "description": "Zona industrial petrolera",
+    "state": "Malo",
+    "coordinates": [-22.70, -43.28]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Gramacho (cerrado)",
+    "address": "Ex lixão de Gramacho, Duque de Caxias",
+    "description": "Mayor vertedero de Latinoamérica (cerrado 2012)",
+    "state": "Malo",
+    "coordinates": [-22.69, -43.26]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Río Bogotá corredor",
+    "address": "Río Bogotá, tramo urbano Soacha-Chía",
+    "description": "Una de las cuencas más contaminadas, aguas residuales",
+    "state": "Crítico",
+    "coordinates": [4.71, -74.13]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Zona Industrial Fontibon",
+    "address": "Localidad de Fontibón, zona industrial",
+    "description": "Industria aeroportuaria y manufacturera",
+    "state": "Malo",
+    "coordinates": [4.68, -74.14]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Av. Caracas corredor",
+    "address": "Avenida Caracas, centro-norte",
+    "description": "TransMilenio mejora calidad, pero alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [4.65, -74.07]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Relleno Doña Juana",
+    "address": "Relleno sanitario Doña Juana, Usme",
+    "description": "Relleno principal, gestión de lixiviados crítica",
+    "state": "Malo",
+    "coordinates": [4.44, -74.17]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Zona Industrial Kennedy",
+    "address": "Localidad de Kennedy, zona industrial",
+    "description": "Pequeña y mediana industria",
+    "state": "Malo",
+    "coordinates": [4.63, -74.15]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Humedal Tibabuyes",
+    "address": "Humedal Juan Amarillo (Tibabuyes), Suba",
+    "description": "Presión urbana, recuperable con protección",
+    "state": "Fácil de limpiar",
+    "coordinates": [4.71, -74.10]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Autopista Norte",
+    "address": "Autopista Norte, corredor completo",
+    "description": "Alta contaminación vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [4.72, -74.05]
+  },
+  {
+    "city": "Caracas",
+    "name": "Río Guaire urbano",
+    "address": "Río Guaire, tramo urbano Caracas",
+    "description": "Aguas residuales sin tratar, contaminación severa",
+    "state": "Crítico",
+    "coordinates": [10.48, -66.88]
+  },
+  {
+    "city": "Caracas",
+    "name": "Autopista Francisco Fajardo",
+    "address": "Autopista Francisco Fajardo",
+    "description": "Contaminación vehicular alta",
+    "state": "Fácil de limpiar",
+    "coordinates": [10.49, -66.88]
+  },
+  {
+    "city": "Caracas",
+    "name": "Zona Industrial La Yaguara",
+    "address": "La Yaguara, Caracas",
+    "description": "Zona industrial comercial",
+    "state": "Malo",
+    "coordinates": [10.47, -66.93]
+  },
+  {
+    "city": "Caracas",
+    "name": "Vertedero La Bonanza",
+    "address": "La Bonanza, vertedero metropolitano",
+    "description": "Gestión deficiente de residuos",
+    "state": "Malo",
+    "coordinates": [10.40, -66.82]
+  },
+  {
+    "city": "Caracas",
+    "name": "Parque Industrial Maracay",
+    "address": "Zona industrial cercana, Estado Aragua",
+    "description": "Industria manufacturera",
+    "state": "Malo",
+    "coordinates": [10.25, -67.60]
+  },
+  {
+    "city": "Caracas",
+    "name": "Av. Libertador",
+    "address": "Avenida Libertador, eje este-oeste",
+    "description": "Tráfico denso, contaminación atmosférica",
+    "state": "Fácil de limpiar",
+    "coordinates": [10.50, -66.91]
+  },
+  {
+    "city": "Caracas",
+    "name": "Los Ruices industrial",
+    "address": "Zona Los Ruices, Miranda",
+    "description": "Pequeña industria y comercio",
+    "state": "Malo",
+    "coordinates": [10.48, -66.84]
+  },
+  {
+    "city": "Beijing",
+    "name": "Distrito Industrial Shijingshan",
+    "address": "Distrito Shijingshan, oeste de Beijing",
+    "description": "Ex zona siderúrgica, suelo contaminado por metales pesados",
+    "state": "Crítico",
+    "coordinates": [39.91, 116.22]
+  },
+  {
+    "city": "Beijing",
+    "name": "Zona Industrial Daxing",
+    "address": "Distrito Daxing, sur de Beijing",
+    "description": "Parques industriales, emisiones atmosféricas",
+    "state": "Malo",
+    "coordinates": [39.73, 116.34]
+  },
+  {
+    "city": "Beijing",
+    "name": "Anillo 4 Este",
+    "address": "4th Ring Road East, Beijing",
+    "description": "Congestión vehicular severa",
+    "state": "Fácil de limpiar",
+    "coordinates": [39.93, 116.48]
+  },
+  {
+    "city": "Beijing",
+    "name": "Río Yongding industrial",
+    "address": "Río Yongding, sector industrial",
+    "description": "Descargas industriales históricas",
+    "state": "Malo",
+    "coordinates": [39.87, 116.15]
+  },
+  {
+    "city": "Beijing",
+    "name": "Distrito Tongzhou desarrollo",
+    "address": "Distrito Tongzhou, este de Beijing",
+    "description": "Rápida urbanización, control de calidad aire necesario",
+    "state": "Fácil de limpiar",
+    "coordinates": [39.91, 116.66]
+  },
+  {
+    "city": "Beijing",
+    "name": "Zona Shougang (reconversión)",
+    "address": "Complejo Shougang, antiguas acerías",
+    "description": "Remediación de suelo post-industrial en curso",
+    "state": "Malo",
+    "coordinates": [39.92, 116.18]
+  },
+  {
+    "city": "Beijing",
+    "name": "Distrito Chaoyang comercial",
+    "address": "Distrito Chaoyang, zona CBD",
+    "description": "Contaminación urbana por tráfico",
+    "state": "Fácil de limpiar",
+    "coordinates": [39.92, 116.48]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Río Huangpu industrial",
+    "address": "Río Huangpu, tramo Baoshan",
+    "description": "Descargas industriales, mejorando con tratamiento",
+    "state": "Malo",
+    "coordinates": [31.40, 121.50]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Zona Industrial Jinshan",
+    "address": "Distrito Jinshan, sur de Shanghai",
+    "description": "Petroquímica y química pesada",
+    "state": "Malo",
+    "coordinates": [30.74, 121.35]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Anillo Exterior Elevado",
+    "address": "Outer Ring Elevated Road",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [31.18, 121.45]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Baoshan Steel (reconversión)",
+    "address": "Baoshan Iron & Steel, distrito Baoshan",
+    "description": "Zona siderúrgica, mejorando tecnología",
+    "state": "Malo",
+    "coordinates": [31.40, 121.47]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Puerto de Shanghai",
+    "address": "Puerto de Yangshan, zona Pudong",
+    "description": "Actividad portuaria, contaminación marina",
+    "state": "Malo",
+    "coordinates": [30.63, 122.07]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Nanjing Road comercial",
+    "address": "Nanjing Road, centro de Shanghai",
+    "description": "Zona peatonalizada, pero alta densidad",
+    "state": "Fácil de limpiar",
+    "coordinates": [31.23, 121.48]
+  },
+    {
+    "city": "Ciudad de México",
+    "name": "Zona Industrial Vallejo",
+    "address": "Av. Vallejo, Col. Vallejo, Alcaldía Gustavo A. Madero, CDMX",
+    "description": "Contaminación industrial histórica, metales pesados en suelo",
+    "state": "Crítico",
+    "coordinates": [19.47, -99.15]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Río de los Remedios",
+    "address": "Río de los Remedios, intersección con Av. Insurgentes Norte",
+    "description": "Aguas residuales sin tratar, contaminación orgánica severa",
+    "state": "Crítico",
+    "coordinates": [19.51, -99.13]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Central de Abasto",
+    "address": "Av. Canal de Tezontle, Iztapalapa, CDMX",
+    "description": "Residuos orgánicos, lixiviados, contaminación de suelo",
+    "state": "Malo",
+    "coordinates": [19.38, -99.09]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Circuito Interior",
+    "address": "Circuito Interior, tramo Viaducto-Revolución",
+    "description": "Alta concentración de partículas PM2.5 y óxidos de nitrógeno",
+    "state": "Crítico",
+    "coordinates": [19.40, -99.17]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Ex Refinería 18 de Marzo",
+    "address": "Calz. Azcapotzalco La Villa, Azcapotzalco",
+    "description": "Suelo contaminado con hidrocarburos, requiere remediación",
+    "state": "Crítico",
+    "coordinates": [19.48, -99.18]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Parque Industrial Xalostoc",
+    "address": "Zona Industrial Xalostoc, Ecatepec, Estado de México",
+    "description": "Emisiones industriales, contaminación atmosférica",
+    "state": "Malo",
+    "coordinates": [19.53, -99.05]
+  },
+  {
+    "city": "Ciudad de México",
+    "name": "Av. Insurgentes Norte corredor",
+    "address": "Insurgentes Norte, tramo La Raza-Indios Verdes",
+    "description": "Contaminación vehicular, fácil de mejorar con transporte público",
+    "state": "Fácil de limpiar",
+    "coordinates": [19.50, -99.14]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Río Santiago en El Salto",
+    "address": "Río Santiago, El Salto, Jalisco",
+    "description": "Descargas industriales químicas, metales pesados",
+    "state": "Crítico",
+    "coordinates": [20.52, -103.18]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Corredor Industrial Tlajomulco",
+    "address": "Carretera Guadalajara-Morelia, Tlajomulco",
+    "description": "Emisiones industriales, manejo inadecuado de residuos",
+    "state": "Malo",
+    "coordinates": [20.57, -103.45]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Basurero de Picachos",
+    "address": "Carretera a Tesistán, Zapopan, Jalisco",
+    "description": "Lixiviados, contaminación de acuíferos",
+    "state": "Crítico",
+    "coordinates": [20.75, -103.45]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Zona Industrial El Álamo",
+    "address": "Parque Industrial El Álamo, Guadalajara",
+    "description": "Emisiones de COVs y partículas suspendidas",
+    "state": "Malo",
+    "coordinates": [20.64, -103.31]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Av. Lázaro Cárdenas",
+    "address": "Av. Lázaro Cárdenas, tramo centro",
+    "description": "Contaminación vehicular alta, mejora con BRT",
+    "state": "Fácil de limpiar",
+    "coordinates": [20.68, -103.35]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Río Blanco",
+    "address": "Cauce del Río Blanco, zona metropolitana",
+    "description": "Descargas residuales urbanas e industriales",
+    "state": "Malo",
+    "coordinates": [20.70, -103.38]
+  },
+  {
+    "city": "Guadalajara",
+    "name": "Mercado de Abastos",
+    "address": "Calz. Dr. Roberto Michel, Guadalajara",
+    "description": "Residuos orgánicos, manejo mejorable",
+    "state": "Fácil de limpiar",
+    "coordinates": [20.65, -103.33]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Zona Industrial Apodaca",
+    "address": "Parque Industrial Apodaca, Nuevo León",
+    "description": "Emisiones industriales metalmecánicas",
+    "state": "Malo",
+    "coordinates": [25.78, -100.18]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Río Santa Catarina (urbano)",
+    "address": "Cauce Río Santa Catarina, zona centro",
+    "description": "Descargas irregulares, residuos sólidos",
+    "state": "Malo",
+    "coordinates": [25.67, -100.31]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Parque Fundidora (histórico)",
+    "address": "Av. Fundidora y Acero, Monterrey",
+    "description": "Suelo contaminado histórico por fundición (en remediación)",
+    "state": "Malo",
+    "coordinates": [25.68, -100.28]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Av. Constitución corredor",
+    "address": "Av. Constitución, centro de Monterrey",
+    "description": "Contaminación vehicular, mejora con movilidad",
+    "state": "Fácil de limpiar",
+    "coordinates": [25.67, -100.32]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Zona Industrial García",
+    "address": "Parque Industrial García, Nuevo León",
+    "description": "Emisiones industriales diversas",
+    "state": "Malo",
+    "coordinates": [25.81, -100.58]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Tiradero La Silla (cerrado)",
+    "address": "Zona La Silla, Guadalupe, Nuevo León",
+    "description": "Ex tiradero, requiere monitoreo de lixiviados",
+    "state": "Malo",
+    "coordinates": [25.66, -100.24]
+  },
+  {
+    "city": "Monterrey",
+    "name": "Vía Rápida Lincoln",
+    "address": "Av. Abraham Lincoln, San Nicolás",
+    "description": "Alta densidad vehicular, contaminación atmosférica",
+    "state": "Fácil de limpiar",
+    "coordinates": [25.74, -100.28]
+  },
+  {
+    "city": "Lima",
+    "name": "Río Rímac industrial",
+    "address": "Río Rímac, distrito El Agustino",
+    "description": "Descargas industriales y mineras, metales pesados",
+    "state": "Crítico",
+    "coordinates": [-12.04, -76.98]
+  },
+  {
+    "city": "Lima",
+    "name": "Zona Industrial Villa El Salvador",
+    "address": "Parque Industrial Villa El Salvador",
+    "description": "Pequeña industria, manejo deficiente de residuos",
+    "state": "Malo",
+    "coordinates": [-12.21, -76.94]
+  },
+  {
+    "city": "Lima",
+    "name": "Playa Agua Dulce",
+    "address": "Playa Agua Dulce, Chorrillos",
+    "description": "Contaminación fecal por descargas, recuperable",
+    "state": "Fácil de limpiar",
+    "coordinates": [-12.17, -77.01]
+  },
+  {
+    "city": "Lima",
+    "name": "Av. Javier Prado Este",
+    "address": "Av. Javier Prado Este, La Molina-San Borja",
+    "description": "Contaminación vehicular alta",
+    "state": "Fácil de limpiar",
+    "coordinates": [-12.08, -76.98]
+  },
+  {
+    "city": "Lima",
+    "name": "Zona Industrial Ate",
+    "address": "Carretera Central, distrito Ate",
+    "description": "Curtiembres y textiles, contaminación hídrica",
+    "state": "Malo",
+    "coordinates": [-12.03, -76.93]
+  },
+  {
+    "city": "Lima",
+    "name": "Ventanilla industrial",
+    "address": "Zona industrial Ventanilla, Callao",
+    "description": "Industria pesada, emisiones atmosféricas",
+    "state": "Malo",
+    "coordinates": [-11.88, -77.13]
+  },
+  {
+    "city": "Lima",
+    "name": "Humedales de Ventanilla (amenazados)",
+    "address": "Humedales de Ventanilla, Callao",
+    "description": "Presión urbana e industrial, recuperable",
+    "state": "Fácil de limpiar",
+    "coordinates": [-11.87, -77.12]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Polpaico (periferia)",
+    "address": "Zona industrial Polpaico, Región Metropolitana",
+    "description": "Cementeras, contaminación atmosférica por partículas",
+    "state": "Malo",
+    "coordinates": [-33.18, -70.95]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Río Mapocho urbano",
+    "address": "Río Mapocho, tramo centro de Santiago",
+    "description": "Contaminación histórica, mejorando con plantas de tratamiento",
+    "state": "Fácil de limpiar",
+    "coordinates": [-33.43, -70.64]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Av. Américo Vespucio Sur",
+    "address": "Av. Américo Vespucio Sur, La Florida",
+    "description": "Congestión vehicular severa",
+    "state": "Fácil de limpiar",
+    "coordinates": [-33.52, -70.60]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Parque Industrial Quilicura",
+    "address": "Quilicura, Región Metropolitana",
+    "description": "Zona industrial diversa, emisiones controlables",
+    "state": "Malo",
+    "coordinates": [-33.36, -70.73]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Estación Central industrial",
+    "address": "Comuna Estación Central",
+    "description": "Pequeña y mediana industria",
+    "state": "Malo",
+    "coordinates": [-33.46, -70.70]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Vertedero Santa Marta (cerrado)",
+    "address": "Ex vertedero Santa Marta, Talagante",
+    "description": "Cerrado pero requiere monitoreo",
+    "state": "Malo",
+    "coordinates": [-33.68, -70.93]
+  },
+  {
+    "city": "Santiago de Chile",
+    "name": "Cerro Renca minas abandonadas",
+    "address": "Cerro Renca, Quilicura",
+    "description": "Pasivos mineros, requiere limpieza",
+    "state": "Malo",
+    "coordinates": [-33.34, -70.74]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Riachuelo Cuenca Matanza",
+    "address": "Cuenca Matanza-Riachuelo, Villa Inflamable",
+    "description": "Una de las cuencas más contaminadas del mundo, metales pesados",
+    "state": "Crítico",
+    "coordinates": [-34.66, -58.35]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Polo Petroquímico Dock Sud",
+    "address": "Dock Sud, Avellaneda",
+    "description": "Industria petroquímica, plomo y otros contaminantes",
+    "state": "Crítico",
+    "coordinates": [-34.65, -58.34]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Av. General Paz",
+    "address": "Av. General Paz, cinturón metropolitano",
+    "description": "Contaminación vehicular intensa",
+    "state": "Fácil de limpiar",
+    "coordinates": [-34.60, -58.50]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "CEAMSE Norte III",
+    "address": "Relleno sanitario Norte III, José León Suárez",
+    "description": "Relleno sanitario, gestión de lixiviados necesaria",
+    "state": "Malo",
+    "coordinates": [-34.52, -58.56]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Parque Industrial Pilar",
+    "address": "Parque Industrial Pilar, Buenos Aires",
+    "description": "Zona industrial diversa",
+    "state": "Malo",
+    "coordinates": [-34.45, -58.90]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Av. 9 de Julio",
+    "address": "Av. 9 de Julio, centro de Buenos Aires",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [-34.60, -58.38]
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Zona Wilde industrial",
+    "address": "Wilde, Avellaneda",
+    "description": "Industria química y metalúrgica",
+    "state": "Malo",
+    "coordinates": [-34.70, -58.32]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Rio Tietê urbano",
+    "address": "Rio Tietê, tramo Penha-Pinheiros",
+    "description": "Contaminación orgánica severa, esgotos",
+    "state": "Crítico",
+    "coordinates": [-23.52, -46.62]
+  },
+  {
+    "city": "São Paulo",
+    "name": "ABC Paulista industrial",
+    "address": "Região ABC, Santo André-São Bernardo",
+    "description": "Corredor industrial automotriz",
+    "state": "Malo",
+    "coordinates": [-23.66, -46.53]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Marginal Tietê",
+    "address": "Via Marginal Tietê",
+    "description": "Una de las vías más contaminadas, tráfico intenso",
+    "state": "Fácil de limpiar",
+    "coordinates": [-23.52, -46.63]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Zona Leste industrial",
+    "address": "Zona Leste, São Miguel Paulista",
+    "description": "Pequeña y mediana industria",
+    "state": "Malo",
+    "coordinates": [-23.50, -46.44]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Av. Paulista",
+    "address": "Avenida Paulista",
+    "description": "Contaminación vehicular, mejora con restricciones",
+    "state": "Fácil de limpiar",
+    "coordinates": [-23.56, -46.66]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Aterro Bandeirantes",
+    "address": "Aterro sanitário Bandeirantes, Perus",
+    "description": "Relleno cerrado, genera biogás aprovechable",
+    "state": "Malo",
+    "coordinates": [-23.42, -46.77]
+  },
+  {
+    "city": "São Paulo",
+    "name": "Córrego Água Espraiada",
+    "address": "Córrego Água Espraiada, zona sul",
+    "description": "Contaminación urbana por esgotos",
+    "state": "Fácil de limpiar",
+    "coordinates": [-23.62, -46.67]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Baía de Guanabara",
+    "address": "Baía de Guanabara, zona norte",
+    "description": "Contaminación por esgoto y residuos industriales",
+    "state": "Crítico",
+    "coordinates": [-22.85, -43.17]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Zona Portuária",
+    "address": "Porto do Rio, região portuária",
+    "description": "Contaminación industrial histórica, en revitalización",
+    "state": "Malo",
+    "coordinates": [-22.89, -43.18]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Linha Vermelha",
+    "address": "Via Expressa Linha Vermelha",
+    "description": "Alta contaminación vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [-22.87, -43.27]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Complexo de Alemão",
+    "address": "Complexo de favelas do Alemão",
+    "description": "Falta de saneamiento básico",
+    "state": "Malo",
+    "coordinates": [-22.86, -43.26]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Lagoa Rodrigo de Freitas",
+    "address": "Lagoa Rodrigo de Freitas, zona sul",
+    "description": "Eutrofización, recuperable con saneamiento",
+    "state": "Fácil de limpiar",
+    "coordinates": [-22.97, -43.21]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Duque de Caxias refinería",
+    "address": "Refinería Duque de Caxias (REDUC)",
+    "description": "Zona industrial petrolera",
+    "state": "Malo",
+    "coordinates": [-22.70, -43.28]
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Gramacho (cerrado)",
+    "address": "Ex lixão de Gramacho, Duque de Caxias",
+    "description": "Mayor vertedero de Latinoamérica (cerrado 2012)",
+    "state": "Malo",
+    "coordinates": [-22.69, -43.26]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Río Bogotá corredor",
+    "address": "Río Bogotá, tramo urbano Soacha-Chía",
+    "description": "Una de las cuencas más contaminadas, aguas residuales",
+    "state": "Crítico",
+    "coordinates": [4.71, -74.13]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Zona Industrial Fontibon",
+    "address": "Localidad de Fontibón, zona industrial",
+    "description": "Industria aeroportuaria y manufacturera",
+    "state": "Malo",
+    "coordinates": [4.68, -74.14]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Av. Caracas corredor",
+    "address": "Avenida Caracas, centro-norte",
+    "description": "TransMilenio mejora calidad, pero alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [4.65, -74.07]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Relleno Doña Juana",
+    "address": "Relleno sanitario Doña Juana, Usme",
+    "description": "Relleno principal, gestión de lixiviados crítica",
+    "state": "Malo",
+    "coordinates": [4.44, -74.17]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Zona Industrial Kennedy",
+    "address": "Localidad de Kennedy, zona industrial",
+    "description": "Pequeña y mediana industria",
+    "state": "Malo",
+    "coordinates": [4.63, -74.15]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Humedal Tibabuyes",
+    "address": "Humedal Juan Amarillo (Tibabuyes), Suba",
+    "description": "Presión urbana, recuperable con protección",
+    "state": "Fácil de limpiar",
+    "coordinates": [4.71, -74.10]
+  },
+  {
+    "city": "Bogotá",
+    "name": "Autopista Norte",
+    "address": "Autopista Norte, corredor completo",
+    "description": "Alta contaminación vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [4.72, -74.05]
+  },
+  {
+    "city": "Caracas",
+    "name": "Río Guaire urbano",
+    "address": "Río Guaire, tramo urbano Caracas",
+    "description": "Aguas residuales sin tratar, contaminación severa",
+    "state": "Crítico",
+    "coordinates": [10.48, -66.88]
+  },
+  {
+    "city": "Caracas",
+    "name": "Autopista Francisco Fajardo",
+    "address": "Autopista Francisco Fajardo",
+    "description": "Contaminación vehicular alta",
+    "state": "Fácil de limpiar",
+    "coordinates": [10.49, -66.88]
+  },
+  {
+    "city": "Caracas",
+    "name": "Zona Industrial La Yaguara",
+    "address": "La Yaguara, Caracas",
+    "description": "Zona industrial comercial",
+    "state": "Malo",
+    "coordinates": [10.47, -66.93]
+  },
+  {
+    "city": "Caracas",
+    "name": "Vertedero La Bonanza",
+    "address": "La Bonanza, vertedero metropolitano",
+    "description": "Gestión deficiente de residuos",
+    "state": "Malo",
+    "coordinates": [10.40, -66.82]
+  },
+  {
+    "city": "Caracas",
+    "name": "Parque Industrial Maracay",
+    "address": "Zona industrial cercana, Estado Aragua",
+    "description": "Industria manufacturera",
+    "state": "Malo",
+    "coordinates": [10.25, -67.60]
+  },
+  {
+    "city": "Caracas",
+    "name": "Av. Libertador",
+    "address": "Avenida Libertador, eje este-oeste",
+    "description": "Tráfico denso, contaminación atmosférica",
+    "state": "Fácil de limpiar",
+    "coordinates": [10.50, -66.91]
+  },
+  {
+    "city": "Caracas",
+    "name": "Los Ruices industrial",
+    "address": "Zona Los Ruices, Miranda",
+    "description": "Pequeña industria y comercio",
+    "state": "Malo",
+    "coordinates": [10.48, -66.84]
+  },
+  {
+    "city": "Beijing",
+    "name": "Distrito Industrial Shijingshan",
+    "address": "Distrito Shijingshan, oeste de Beijing",
+    "description": "Ex zona siderúrgica, suelo contaminado por metales pesados",
+    "state": "Crítico",
+    "coordinates": [39.91, 116.22]
+  },
+  {
+    "city": "Beijing",
+    "name": "Zona Industrial Daxing",
+    "address": "Distrito Daxing, sur de Beijing",
+    "description": "Parques industriales, emisiones atmosféricas",
+    "state": "Malo",
+    "coordinates": [39.73, 116.34]
+  },
+  {
+    "city": "Beijing",
+    "name": "Anillo 4 Este",
+    "address": "4th Ring Road East, Beijing",
+    "description": "Congestión vehicular severa",
+    "state": "Fácil de limpiar",
+    "coordinates": [39.93, 116.48]
+  },
+  {
+    "city": "Beijing",
+    "name": "Río Yongding industrial",
+    "address": "Río Yongding, sector industrial",
+    "description": "Descargas industriales históricas",
+    "state": "Malo",
+    "coordinates": [39.87, 116.15]
+  },
+  {
+    "city": "Beijing",
+    "name": "Distrito Tongzhou desarrollo",
+    "address": "Distrito Tongzhou, este de Beijing",
+    "description": "Rápida urbanización, control de calidad aire necesario",
+    "state": "Fácil de limpiar",
+    "coordinates": [39.91, 116.66]
+  },
+  {
+    "city": "Beijing",
+    "name": "Zona Shougang (reconversión)",
+    "address": "Complejo Shougang, antiguas acerías",
+    "description": "Remediación de suelo post-industrial en curso",
+    "state": "Malo",
+    "coordinates": [39.92, 116.18]
+  },
+  {
+    "city": "Beijing",
+    "name": "Distrito Chaoyang comercial",
+    "address": "Distrito Chaoyang, zona CBD",
+    "description": "Contaminación urbana por tráfico",
+    "state": "Fácil de limpiar",
+    "coordinates": [39.92, 116.48]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Río Huangpu industrial",
+    "address": "Río Huangpu, tramo Baoshan",
+    "description": "Descargas industriales, mejorando con tratamiento",
+    "state": "Malo",
+    "coordinates": [31.40, 121.50]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Zona Industrial Jinshan",
+    "address": "Distrito Jinshan, sur de Shanghai",
+    "description": "Petroquímica y química pesada",
+    "state": "Malo",
+    "coordinates": [30.74, 121.35]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Anillo Exterior Elevado",
+    "address": "Outer Ring Elevated Road",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [31.18, 121.45]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Baoshan Steel (reconversión)",
+    "address": "Baoshan Iron & Steel, distrito Baoshan",
+    "description": "Zona siderúrgica, mejorando tecnología",
+    "state": "Malo",
+    "coordinates": [31.40, 121.47]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Puerto de Shanghai",
+    "address": "Puerto de Yangshan, zona Pudong",
+    "description": "Actividad portuaria, contaminación marina",
+    "state": "Malo",
+    "coordinates": [30.63, 122.07]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Nanjing Road comercial",
+    "address": "Nanjing Road, centro de Shanghai",
+    "description": "Zona peatonalizada, pero alta densidad",
+    "state": "Fácil de limpiar",
+    "coordinates": [31.23, 121.48]
+  },
+  {
+    "city": "Shanghai",
+    "name": "Río Suzhou Creek",
+    "address": "Suzhou Creek, afluente Huangpu",
+    "description": "Contaminación urbana histórica, en recuperación",
+    "state": "Fácil de limpiar",
+    "coordinates": [31.25, 121.45]
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Río Perla urbano",
+    "address": "Río Perla, tramo urbano Guangzhou",
+    "description": "Descargas industriales y urbanas",
+    "state": "Malo",
+    "coordinates": [23.12, 113.26]
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Zona Industrial Nansha",
+    "address": "Distrito Nansha, sur de Guangzhou",
+    "description": "Industria pesada y astilleros",
+    "state": "Malo",
+    "coordinates": [22.77, 113.53]
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Autopista Guangzhou-Foshan",
+    "address": "Guangfo Expressway",
+    "description": "Corredor industrial denso",
+    "state": "Fácil de limpiar",
+    "coordinates": [23.08, 113.15]
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Distrito Baiyun industrial",
+    "address": "Distrito Baiyun, norte de Guangzhou",
+    "description": "Manufactura ligera y textiles",
+    "state": "Malo",
+    "coordinates": [23.27, 113.27]
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Haizhu industrial",
+    "address": "Isla Haizhu, zona industrial",
+    "description": "Pequeña industria urbana",
+    "state": "Malo",
+    "coordinates": [23.08, 113.32]
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Tianhe CBD",
+    "address": "Distrito Tianhe, zona comercial",
+    "description": "Contaminación vehicular alta",
+    "state": "Fácil de limpiar",
+    "coordinates": [23.13, 113.32]
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Puerto de Guangzhou",
+    "address": "Puerto de Guangzhou, Huangpu",
+    "description": "Actividad portuaria e industrial",
+    "state": "Malo",
+    "coordinates": [23.08, 113.45]
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Bahía Shenzhen industrial",
+    "address": "Bahía de Shenzhen, zona oeste",
+    "description": "Contaminación marina por actividad industrial",
+    "state": "Malo",
+    "coordinates": [22.53, 113.90]
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Zona Industrial Bao'an",
+    "address": "Distrito Bao'an, oeste de Shenzhen",
+    "description": "Electrónica y manufactura",
+    "state": "Malo",
+    "coordinates": [22.56, 113.88]
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Corredor Shennan",
+    "address": "Shennan Avenue, eje este-oeste",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [22.54, 114.05]
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Longgang industrial",
+    "address": "Distrito Longgang, este de Shenzhen",
+    "description": "Manufactura electrónica masiva",
+    "state": "Malo",
+    "coordinates": [22.72, 114.25]
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Puerto de Shenzhen",
+    "address": "Puerto de Yantian, distrito Yantian",
+    "description": "Uno de los puertos más activos del mundo",
+    "state": "Malo",
+    "coordinates": [22.59, 114.27]
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Zona Futian CBD",
+    "address": "Distrito Futian, centro financiero",
+    "description": "Contaminación urbana por tráfico",
+    "state": "Fácil de limpiar",
+    "coordinates": [22.54, 114.06]
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Río Shenzhen urbano",
+    "address": "Río Shenzhen, tramo urbano",
+    "description": "Contaminación urbana, en mejora",
+    "state": "Fácil de limpiar",
+    "coordinates": [22.54, 114.02]
+  },
+  {
+    "city": "Delhi (New Delhi)",
+    "name": "Río Yamuna urbano",
+    "address": "Río Yamuna, tramo Delhi",
+    "description": "Uno de los ríos más contaminados del mundo, aguas negras",
+    "state": "Crítico",
+    "coordinates": [28.66, 77.24]
+  },
+  {
+    "city": "Delhi (New Delhi)",
+    "name": "Zona Industrial Okhla",
+    "address": "Okhla Industrial Area, sur de Delhi",
+    "description": "Industria diversa, emisiones altas",
+    "state": "Crítico",
+    "coordinates": [28.53, 77.27]
+  },
+  {
+    "city": "Delhi (New Delhi)",
+    "name": "Anand Vihar Terminal",
+    "address": "Anand Vihar ISBT, este de Delhi",
+    "description": "Una de las zonas con peor calidad de aire del mundo",
+    "state": "Crítico",
+    "coordinates": [28.65, 77.31]
+  },
+  {
+    "city": "Delhi (New Delhi)",
+    "name": "Ghazipur Landfill",
+    "address": "Vertedero Ghazipur, este de Delhi",
+    "description": "Montaña de basura de 65m, incendios espontáneos",
+    "state": "Crítico",
+    "coordinates": [28.63, 77.32]
+  },
+  {
+    "city": "Delhi (New Delhi)",
+    "name": "Ring Road corredor",
+    "address": "Outer Ring Road, Delhi",
+    "description": "Congestión vehicular extrema",
+    "state": "Malo",
+    "coordinates": [28.60, 77.22]
+  },
+  {
+    "city": "Delhi (New Delhi)",
+    "name": "Najafgarh industrial",
+    "address": "Zona industrial Najafgarh, oeste Delhi",
+    "description": "Industria no regulada, contaminación severa",
+    "state": "Crítico",
+    "coordinates": [28.61, 76.98]
+  },
+  {
+    "city": "Delhi (New Delhi)",
+    "name": "Connaught Place",
+    "address": "Connaught Place, centro Nueva Delhi",
+    "description": "Alta densidad vehicular, mejora con metro",
+    "state": "Fácil de limpiar",
+    "coordinates": [28.63, 77.22]
+  },
+  {
+    "city": "Mumbai",
+    "name": "Río Mithi urbano",
+    "address": "Río Mithi, tramo urbano Mumbai",
+    "description": "Aguas residuales y residuos sólidos",
+    "state": "Crítico",
+    "coordinates": [19.07, 72.88]
+  },
+  {
+    "city": "Mumbai",
+    "name": "Dharavi industrial",
+    "address": "Dharavi, zona industrial informal",
+    "description": "Manufactura informal, curtidurías, contaminación severa",
+    "state": "Crítico",
+    "coordinates": [19.04, 72.85]
+  },
+  {
+    "city": "Mumbai",
+    "name": "Deonar Landfill",
+    "address": "Vertedero Deonar, este de Mumbai",
+    "description": "Uno de los vertederos más grandes de India",
+    "state": "Malo",
+    "coordinates": [19.05, 72.92]
+  },
+  {
+    "city": "Mumbai",
+    "name": "Western Express Highway",
+    "address": "Western Express Highway, corredor norte-sur",
+    "description": "Contaminación vehicular alta",
+    "state": "Fácil de limpiar",
+    "coordinates": [19.18, 72.84]
+  },
+  {
+    "city": "Mumbai",
+    "name": "Mahul industrial",
+    "address": "Mahul, zona industrial Chembur",
+    "description": "Refinerías y química, zona altamente tóxica",
+    "state": "Crítico",
+    "coordinates": [19.03, 72.93]
+  },
+  {
+    "city": "Mumbai",
+    "name": "Marine Drive",
+    "address": "Marine Drive, costa oeste",
+    "description": "Contaminación vehicular, gestión mejorable",
+    "state": "Fácil de limpiar",
+    "coordinates": [18.94, 72.82]
+  },
+  {
+    "city": "Mumbai",
+    "name": "Versova Beach",
+    "address": "Playa Versova, Andheri",
+    "description": "Contaminación plástica severa, recuperable con limpieza",
+    "state": "Fácil de limpiar",
+    "coordinates": [19.13, 72.81]
+  },
+  {
+    "city": "Kolkata",
+    "name": "Río Hooghly industrial",
+    "address": "Río Hooghly, tramo industrial Howrah",
+    "description": "Descargas industriales y urbanas",
+    "state": "Crítico",
+    "coordinates": [22.58, 88.33]
+  },
+  {
+    "city": "Kolkata",
+    "name": "Zona Industrial Howrah",
+    "address": "Howrah Industrial Area",
+    "description": "Industria pesada, metalurgia",
+    "state": "Malo",
+    "coordinates": [22.57, 88.31]
+  },
+  {
+    "city": "Kolkata",
+    "name": "Dhapa Landfill",
+    "address": "Vertedero Dhapa, este de Kolkata",
+    "description": "Vertedero principal, gestión deficiente",
+    "state": "Malo",
+    "coordinates": [22.54, 88.42]
+  },
+  {
+    "city": "Kolkata",
+    "name": "EM Bypass",
+    "address": "Eastern Metropolitan Bypass",
+    "description": "Alta congestión vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [22.52, 88.38]
+  },
+  {
+    "city": "Kolkata",
+    "name": "Leather Complex Tangra",
+    "address": "Tangra, zona curtidurías",
+    "description": "Curtidurías, cromo y otros metales pesados",
+    "state": "Crítico",
+    "coordinates": [22.55, 88.38]
+  },
+  {
+    "city": "Kolkata",
+    "name": "Garden Reach industrial",
+    "address": "Garden Reach, astilleros",
+    "description": "Industria naval y metalmecánica",
+    "state": "Malo",
+    "coordinates": [22.54, 88.32]
+  },
+  {
+    "city": "Kolkata",
+    "name": "Park Street comercial",
+    "address": "Park Street, centro de Kolkata",
+    "description": "Zona comercial, contaminación vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [22.55, 88.35]
+  },
+  {
+    "city": "Dhaka",
+    "name": "Río Buriganga",
+    "address": "Río Buriganga, tramo urbano Dhaka",
+    "description": "Uno de los ríos más contaminados del mundo, curtidurías",
+    "state": "Crítico",
+    "coordinates": [23.72, 90.38]
+  },
+  {
+    "city": "Dhaka",
+    "name": "Hazaribagh Tannery",
+    "address": "Hazaribagh, zona curtidurías (reubicada)",
+    "description": "Ex zona curtidurías, suelo altamente contaminado con cromo",
+    "state": "Crítico",
+    "coordinates": [23.73, 90.36]
+  },
+  {
+    "city": "Dhaka",
+    "name": "Tejgaon Industrial Area",
+    "address": "Tejgaon Industrial Area",
+    "description": "Industria diversa en zona urbana",
+    "state": "Crítico",
+    "coordinates": [23.76, 90.40]
+  },
+  {
+    "city": "Dhaka",
+    "name": "Matuail Landfill",
+    "address": "Vertedero Matuail, sur de Dhaka",
+    "description": "Vertedero principal, gestión inadecuada",
+    "state": "Crítico",
+    "coordinates": [23.69, 90.43]
+  },
+  {
+    "city": "Dhaka",
+    "name": "Motijheel CBD",
+    "address": "Motijheel Commercial Area",
+    "description": "Congestión vehicular extrema",
+    "state": "Malo",
+    "coordinates": [23.73, 90.42]
+  },
+  {
+    "city": "Dhaka",
+    "name": "Río Turag",
+    "address": "Río Turag, norte de Dhaka",
+    "description": "Contaminación industrial severa",
+    "state": "Crítico",
+    "coordinates": [23.83, 90.39]
+  },
+  {
+    "city": "Dhaka",
+    "name": "Farmgate Junction",
+    "address": "Farmgate, intersección central",
+    "description": "Uno de los puntos más congestionados",
+    "state": "Fácil de limpiar",
+    "coordinates": [23.76, 90.39]
+  },
+  {
+    "city": "Karachi",
+    "name": "Río Lyari",
+    "address": "Río Lyari, tramo urbano Karachi",
+    "description": "Aguas negras sin tratar, residuos industriales",
+    "state": "Crítico",
+    "coordinates": [24.86, 67.01]
+  },
+  {
+    "city": "Karachi",
+    "name": "SITE Industrial Area",
+    "address": "Sindh Industrial Trading Estate",
+    "description": "Mayor zona industrial de Pakistán",
+    "state": "Crítico",
+    "coordinates": [24.90, 67.06]
+  },
+  {
+    "city": "Karachi",
+    "name": "Korangi Industrial Area",
+    "address": "Korangi Industrial Area",
+    "description": "Textiles, química, sin tratamiento adecuado",
+    "state": "Crítico",
+    "coordinates": [24.83, 67.12]
+  },
+  {
+    "city": "Karachi",
+    "name": "Jam Sadiq Bridge",
+    "address": "Jam Sadiq Ali Khan Bridge",
+    "description": "Congestión vehicular extrema",
+    "state": "Malo",
+    "coordinates": [24.91, 67.08]
+  },
+  {
+    "city": "Karachi",
+    "name": "Manghopir Road",
+    "address": "Manghopir Road, noroeste Karachi",
+    "description": "Vertederos informales, contaminación severa",
+    "state": "Crítico",
+    "coordinates": [24.95, 67.06]
+  },
+  {
+    "city": "Karachi",
+    "name": "Clifton Beach",
+    "address": "Clifton Beach, costa sur",
+    "description": "Contaminación marina por descargas, recuperable",
+    "state": "Fácil de limpiar",
+    "coordinates": [24.80, 67.03]
+  },
+  {
+    "city": "Karachi",
+    "name": "Port Qasim",
+    "address": "Puerto Qasim, sureste Karachi",
+    "description": "Actividad industrial portuaria",
+    "state": "Malo",
+    "coordinates": [24.78, 67.35]
+  },
+  {
+    "city": "Jakarta",
+    "name": "Río Ciliwung urbano",
+    "address": "Río Ciliwung, tramo urbano Jakarta",
+    "description": "Aguas residuales sin tratar, residuos sólidos",
+    "state": "Crítico",
+    "coordinates": [-6.20, 106.83]
+  },
+  {
+    "city": "Jakarta",
+    "name": "Bahía de Jakarta",
+    "address": "Bahía de Jakarta, costa norte",
+    "description": "Contaminación marina severa, plásticos",
+    "state": "Crítico",
+    "coordinates": [-6.10, 106.82]
+  },
+  {
+    "city": "Jakarta",
+    "name": "Bantar Gebang Landfill",
+    "address": "Vertedero Bantar Gebang, Bekasi",
+    "description": "Uno de los vertederos más grandes del mundo",
+    "state": "Crítico",
+    "coordinates": [-6.34, 107.00]
+  },
+  {
+    "city": "Jakarta",
+    "name": "Jalan Tol Dalam Kota",
+    "address": "Inner City Toll Road",
+    "description": "Congestión vehicular extrema",
+    "state": "Malo",
+    "coordinates": [-6.17, 106.83]
+  },
+  {
+    "city": "Jakarta",
+    "name": "Zona Industrial Pulogadung",
+    "address": "Kawasan Industri Pulogadung",
+    "description": "Industria diversa en zona urbana",
+    "state": "Crítico",
+    "coordinates": [-6.18, 106.90]
+  },
+  {
+    "city": "Jakarta",
+    "name": "Kamal Muara",
+    "address": "Kamal Muara, Jakarta Norte",
+    "description": "Asentamientos costeros, contaminación",
+    "state": "Malo",
+    "coordinates": [-6.11, 106.74]
+  },
+  {
+    "city": "Jakarta",
+    "name": "Tanah Abang comercial",
+    "address": "Tanah Abang, centro textil",
+    "description": "Zona comercial densa, gestión de residuos",
+    "state": "Fácil de limpiar",
+    "coordinates": [-6.18, 106.81]
+  },
+  {
+    "city": "Manila",
+    "name": "Río Pasig urbano",
+    "address": "Río Pasig, tramo urbano Manila",
+    "description": "Declarado biológicamente muerto en 1990s, en recuperación",
+    "state": "Crítico",
+    "coordinates": [14.58, 121.00]
+  },
+  {
+    "city": "Manila",
+    "name": "Bahía de Manila",
+    "address": "Bahía de Manila, costa oeste",
+    "description": "Contaminación fecal y plásticos",
+    "state": "Crítico",
+    "coordinates": [14.57, 120.97]
+  },
+  {
+    "city": "Manila",
+    "name": "Smokey Mountain (cerrado)",
+    "address": "Ex vertedero Smokey Mountain, Tondo",
+    "description": "Ex vertedero icónico, cerrado pero suelo contaminado",
+    "state": "Crítico",
+    "coordinates": [14.61, 120.95]
+  },
+  {
+    "city": "Manila",
+    "name": "EDSA Highway",
+    "address": "Epifanio de los Santos Avenue",
+    "description": "Una de las vías más congestionadas del mundo",
+    "state": "Crítico",
+    "coordinates": [14.57, 121.05]
+  },
+  {
+    "city": "Manila",
+    "name": "Payatas Landfill",
+    "address": "Vertedero Payatas, Quezon City",
+    "description": "Vertedero masivo, colapso fatal en 2000",
+    "state": "Crítico",
+    "coordinates": [14.72, 121.10]
+  },
+  {
+    "city": "Manila",
+    "name": "Puerto de Manila",
+    "address": "Puerto de Manila, bahía",
+    "description": "Actividad portuaria intensa",
+    "state": "Malo",
+    "coordinates": [14.58, 120.96]
+  },
+  {
+    "city": "Manila",
+    "name": "Quezon Avenue comercial",
+    "address": "Quezon Avenue, Quezon City",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [14.64, 121.03]
+  },
+  {
+    "city": "Bangkok",
+    "name": "Río Chao Phraya industrial",
+    "address": "Río Chao Phraya, tramo industrial",
+    "description": "Descargas industriales y urbanas",
+    "state": "Malo",
+    "coordinates": [13.73, 100.52]
+  },
+  {
+    "city": "Bangkok",
+    "name": "Khlong Toei Port",
+    "address": "Puerto Khlong Toei",
+    "description": "Zona portuaria e industrial",
+    "state": "Malo",
+    "coordinates": [13.71, 100.56]
+  },
+  {
+    "city": "Bangkok",
+    "name": "Sukhumvit Road",
+    "address": "Sukhumvit Road, corredor este",
+    "description": "Congestión vehicular alta",
+    "state": "Fácil de limpiar",
+    "coordinates": [13.74, 100.56]
+  },
+  {
+    "city": "Bangkok",
+    "name": "Rama IV Road",
+    "address": "Rama IV Road, centro Bangkok",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [13.73, 100.54]
+  },
+  {
+    "city": "Bangkok",
+    "name": "Bang Plee Industrial",
+    "address": "Zona Industrial Bang Plee, Samut Prakan",
+    "description": "Industria manufacturera",
+    "state": "Malo",
+    "coordinates": [13.63, 100.73]
+  },
+  {
+    "city": "Bangkok",
+    "name": "Chatuchak Market",
+    "address": "Mercado Chatuchak, norte Bangkok",
+    "description": "Gestión de residuos orgánicos",
+    "state": "Fácil de limpiar",
+    "coordinates": [13.80, 100.55]
+  },
+  {
+    "city": "Bangkok",
+    "name": "Khlong Saen Saep",
+    "address": "Canal Khlong Saen Saep",
+    "description": "Canal urbano contaminado, usado para transporte",
+    "state": "Malo",
+    "coordinates": [13.75, 100.57]
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Río Saigón urbano",
+    "address": "Río Saigón, tramo urbano",
+    "description": "Descargas urbanas e industriales",
+    "state": "Malo",
+    "coordinates": [10.77, 106.70]
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Canal Thi Nghe",
+    "address": "Canal Thi Nghe, centro HCMC",
+    "description": "Aguas residuales, contaminación orgánica",
+    "state": "Malo",
+    "coordinates": [10.80, 106.69]
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Zona Industrial Tan Thuan",
+    "address": "Tan Thuan Export Processing Zone",
+    "description": "Zona industrial y portuaria",
+    "state": "Malo",
+    "coordinates": [10.73, 106.71]
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Le Loi Boulevard",
+    "address": "Le Loi Boulevard, Distrito 1",
+    "description": "Alta densidad de motos, contaminación",
+    "state": "Fácil de limpiar",
+    "coordinates": [10.77, 106.70]
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Dong Nai River industrial",
+    "address": "Río Dong Nai, zona industrial",
+    "description": "Descargas industriales periurbanas",
+    "state": "Malo",
+    "coordinates": [10.88, 106.80]
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Cat Lai Port",
+    "address": "Puerto Cat Lai, Distrito 2",
+    "description": "Actividad portuaria",
+    "state": "Malo",
+    "coordinates": [10.78, 106.78]
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Ben Thanh Market",
+    "address": "Mercado Ben Thanh, Distrito 1",
+    "description": "Gestión de residuos orgánicos",
+    "state": "Fácil de limpiar",
+    "coordinates": [10.77, 106.70]
+  },
+  {
+    "city": "Tokyo",
+    "name": "Bahía de Tokyo industrial",
+    "address": "Bahía de Tokyo, zona Kawasaki",
+    "description": "Zona industrial petroquímica",
+    "state": "Malo",
+    "coordinates": [35.53, 139.75]
+  },
+  {
+    "city": "Tokyo",
+    "name": "Ruta 246",
+    "address": "Ruta Nacional 246, Shibuya-Setagaya",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [35.65, 139.68]
+  },
+  {
+    "city": "Tokyo",
+    "name": "Río Sumida urbano",
+    "address": "Río Sumida, tramo urbano",
+    "description": "Contaminación urbana, mejorando",
+    "state": "Fácil de limpiar",
+    "coordinates": [35.70, 139.80]
+  },
+  {
+    "city": "Tokyo",
+    "name": "Keihin Industrial Zone",
+    "address": "Zona Industrial Keihin, bahía Tokyo",
+    "description": "Industria pesada histórica",
+    "state": "Malo",
+    "coordinates": [35.55, 139.74]
+  },
+  {
+    "city": "Tokyo",
+    "name": "Shinjuku Station area",
+    "address": "Área Estación Shinjuku",
+    "description": "Alta densidad humana y vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [35.69, 139.70]
+  },
+  {
+    "city": "Tokyo",
+    "name": "Tsukiji Market (relocalized)",
+    "address": "Ex Mercado Tsukiji, Chuo",
+    "description": "Ex mercado de pescado, en transición",
+    "state": "Fácil de limpiar",
+    "coordinates": [35.67, 139.77]
+  },
+  {
+    "city": "Tokyo",
+    "name": "Haneda Airport vicinity",
+    "address": "Zona Aeropuerto Haneda",
+    "description": "Emisiones aeroportuarias",
+    "state": "Malo",
+    "coordinates": [35.55, 139.78]
+  },
+  {
+    "city": "Seoul",
+    "name": "Río Han urbano",
+    "address": "Río Han, tramo central Seúl",
+    "description": "Contaminación urbana, mejorando con tratamiento",
+    "state": "Fácil de limpiar",
+    "coordinates": [37.53, 126.98]
+  },
+  {
+    "city": "Seoul",
+    "name": "Guro Digital Complex",
+    "address": "Guro Digital Complex, suroeste Seúl",
+    "description": "Ex zona industrial, ahora tecnológica",
+    "state": "Malo",
+    "coordinates": [37.48, 126.90]
+  },
+  {
+    "city": "Seoul",
+    "name": "Gangnam Station area",
+    "address": "Área Estación Gangnam",
+    "description": "Alta densidad vehicular",
+    "state": "Fácil de limpiar",
+    "coordinates": [37.50, 127.03]
+  },
+  {
+    "city": "Seoul",
+    "name": "Cheonggyecheon Stream",
+    "address": "Arroyo Cheonggyecheon, centro Seúl",
+    "description": "Restaurado en 2005, ejemplo de recuperación",
+    "state": "Fácil de limpiar",
+    "coordinates": [37.57, 127.00]
+  },
+  {
+    "city": "Seoul",
+    "name": "Incheon Port vicinity",
+    "address": "Zona Puerto Incheon (área metropolitana)",
+    "description": "Actividad industrial portuaria",
+    "state": "Malo",
+    "coordinates": [37.47, 126.62]
   },
 
   {
